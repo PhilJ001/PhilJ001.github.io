@@ -152,68 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-SpringMVC-组件解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2020/03/05/SpringMVC-%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/">SpringMVC 组件解析</a>
-    </h1>
-  
-
-        
-        <a href="/2020/03/05/SpringMVC-%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2020-03-04T17:27:00.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-05</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2020/03/05/SpringMVC-%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -295,14 +233,47 @@
 
         
         <a href="/2018/04/01/SpringMVC%20%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/" class="archive-article-date">
-  	<time datetime="2018-03-31T17:27:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
+  	<time datetime="2018-03-31T16:27:02.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="一、Spring-MVC-的执行流程："><a href="#一、Spring-MVC-的执行流程：" class="headerlink" title="一、Spring MVC 的执行流程："></a>一、Spring MVC 的执行流程：</h2><p> <img src="https://img-blog.csdnimg.cn/2020030501410367.png?x-oss-proce,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNjQwODAx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+        <h2 id="1-SpringMVC的执行流程："><a href="#1-SpringMVC的执行流程：" class="headerlink" title="1. SpringMVC的执行流程："></a>1. SpringMVC的执行流程：</h2><p><img src="https://img-blog.csdnimg.cn/2020030501410367.png?x-oss-proce,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNjQwODAx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br>详解：<br>①用户发送请求至前端控制器DispatcherServlet。<br>②DispatcherServlet收到请求调用HandlerMapping处理器映射器。<br>③处理器映射器找到具体的处理器(可以根据xml配置、注解进行查找)，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。<br>④DispatcherServlet调用HandlerAdapter处理器适配器。<br>⑤HandlerAdapter经过适配调用具体的处理器(Controller，也叫后端控制器)。<br>⑥Controller执行完成返回ModelAndView。<br>⑦HandlerAdapter将controller执行结果ModelAndView返回给DispatcherServlet。<br>⑧DispatcherServlet将ModelAndView传给ViewReslover视图解析器。<br>⑨ViewReslover解析后返回具体View。<br>⑩DispatcherServlet根据View进行渲染视图（即将模型数据填充至视图中）。DispatcherServlet响应用户。</p>
+<h2 id="2-SpringMVC注解解析"><a href="#2-SpringMVC注解解析" class="headerlink" title="2. SpringMVC注解解析"></a>2. SpringMVC注解解析</h2><h4 id="RequestMapping"><a href="#RequestMapping" class="headerlink" title="@RequestMapping"></a>@RequestMapping</h4><h6 id="—-gt-请求映射：对你请求的虚拟地址-进行映射到具体的某个方法上"><a href="#—-gt-请求映射：对你请求的虚拟地址-进行映射到具体的某个方法上" class="headerlink" title="— &gt;请求映射：对你请求的虚拟地址 进行映射到具体的某个方法上"></a>— &gt;请求映射：对你请求的虚拟地址 进行映射到具体的某个方法上</h6><h6 id="作用："><a href="#作用：" class="headerlink" title="作用："></a>作用：</h6><p>用于建立请求 URL 和处理请求方法之间的对应关系</p>
+<h6 id="位置："><a href="#位置：" class="headerlink" title="位置："></a>位置：</h6><ol>
+<li>类上，请求URL 的第一级访问目录。此处不写的话，就相当于应用的根目录</li>
+<li>方法上，请求 URL 的第二级访问目录，与类上的使用@ReqquestMapping标注的一级目录一起组成访问虚拟路径<h6 id="属性："><a href="#属性：" class="headerlink" title="属性："></a>属性：</h6>value：用于指定请求的URL。它和path属性的作用是一样的<br>method：用于指定请求的方式<br>params：用于指定限制请求参数的条件。它支持简单的表达式。要求请求参数的key和value必须和配置的一模一样<h6 id="例如："><a href="#例如：" class="headerlink" title="例如："></a>例如：</h6>params = {“accountName”}，表示请求参数必须有accountName<br>params = {“moeny!100”}，表示请求参数中money不能是100</li>
+</ol>
+<h5 id="2-1-mvc命名空间引入："><a href="#2-1-mvc命名空间引入：" class="headerlink" title="2.1 mvc命名空间引入："></a>2.1 mvc命名空间引入：</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">命名空间：xmlns:context="http://www.springframework.org/schema/context"</span><br><span class="line">xmlns:mvc="http://www.springframework.org/schema/mvc"</span><br><span class="line">约束地址：http://www.springframework.org/schema/context</span><br><span class="line">http://www.springframework.org/schema/context/spring-context.xsd</span><br><span class="line">http://www.springframework.org/schema/mvc</span><br><span class="line">http://www.springframework.org/schema/mvc/spring-mvc.xsd</span><br></pre></td></tr></table></figure>
+<h5 id="2-2-组件扫描"><a href="#2-2-组件扫描" class="headerlink" title="2.2 组件扫描"></a>2.2 组件扫描</h5><p>SpringMVC基于Spring容器，所以在进行SpringMVC操作时，需要将Controller存储到Spring容器中，如果使用@Controller注解标注的话，就需要使用&lt;context:component-scan base-package=“com.itheima.controller”/&gt;进行组件扫描。</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">--Controller</span>的组件扫描<span class="selector-tag">--</span>&gt;</span><br><span class="line">&lt;context:component-scan base-package="com.itheima"&gt;</span><br><span class="line">    &lt;context:include-filter type="annotation" expression="org.springframework.stereotype.Controller"/&gt;</span><br><span class="line">&lt;/context:component-scan&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="3-SpringMVC组件解析"><a href="#3-SpringMVC组件解析" class="headerlink" title="3. SpringMVC组件解析"></a>3. SpringMVC组件解析</h2><p><img src="https://img-blog.csdnimg.cn/20200305022607705.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3FxXzQyNjQwODAx,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"><br><strong>在这个文件中可以查看默认组件</strong></p>
+<ol>
+<li>前端控制器：DispatcherServlet<br>用户请求到达前端控制器，它就相当于 MVC 模式中的 C，DispatcherServlet 是整个流程控制的中心，由<br>它调用其它组件处理用户的请求，DispatcherServlet 的存在降低了组件之间的耦合性。</li>
+<li>处理器映射器：HandlerMapping<br>HandlerMapping 负责根据用户请求找到 Handler 即处理器，SpringMVC 提供了不同的映射器实现不同的<br>映射方式，例如：配置文件方式，实现接口方式，注解方式等。</li>
+<li>处理器适配器：HandlerAdapter<br>通过 HandlerAdapter 对处理器进行执行，这是适配器模式的应用，通过扩展适配器可以对更多类型的处理器进行执行。</li>
+<li>处理器：Handler<br>它就是我们开发中要编写的具体业务控制器。由 DispatcherServlet 把用户请求转发到 Handler。由<br>Handler 对具体的用户请求进行处理。</li>
+<li>视图解析器：View Resolver<br>View Resolver 负责将处理结果生成 View 视图，View Resolver 首先根据逻辑视图名解析成物理视图名，即具体的页面地址，再生成 View 视图对象，最后对 View 进行渲染将处理结果通过页面展示给用户。</li>
+<li>视图：View<br>SpringMVC 框架提供了很多的 View 视图类型的支持，包括：jstlView、freemarkerView、pdfView等。最常用的视图就是 jsp。一般情况下需要通过页面标签或页面模版技术将模型数据通过页面展示给用户，需要由程序员根据业务需求开发具体的页面</li>
+</ol>
+<h2 id="4-SpringMVC的XML配置解析"><a href="#4-SpringMVC的XML配置解析" class="headerlink" title="4. SpringMVC的XML配置解析"></a>4. SpringMVC的XML配置解析</h2><p>SpringMVC有默认组件配置，默认组件都是DispatcherServlet.properties配置文件中配置的，该配置文件地址org/springframework/web/servlet/DispatcherServlet.properties，该文件中配置了默认的视图解析器，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">org.springframework.web.servlet.ViewResolver = org.springframework.web.servlet.view.InternalResourceViewResolver</span><br></pre></td></tr></table></figure>
+<p>翻看该解析器源码，可以看到该解析器的默认设置，如下：</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">REDIRECT_URL_PREFIX = "redirect:" --重定向前缀</span><br><span class="line">FORWARD_URL_PREFIX = "forward:" --转发前缀（默认值）</span><br><span class="line">prefix = ""; --视图名称前缀</span><br><span class="line">suffix = ""; --视图名称后缀</span><br></pre></td></tr></table></figure>
+<ol>
+<li>视图解析器<br>我们可以通过属性注入的方式修改视图的的前后缀</li>
+</ol>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;!<span class="selector-tag">--</span>配置内部资源视图解析器<span class="selector-tag">--</span>&gt;</span><br><span class="line">&lt;bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"&gt;</span><br><span class="line">    &lt;property name="prefix" value="/WEB-INF/views/"&gt;&lt;/property&gt;</span><br><span class="line">    &lt;property name="suffix" value=".jsp"&gt;&lt;/property&gt;</span><br><span class="line">&lt;/bean&gt;</span><br></pre></td></tr></table></figure>
+
+
+<h2 id="知识要点："><a href="#知识要点：" class="headerlink" title="知识要点："></a>知识要点：</h2><ul>
+<li>SpringMVC的相关组件<br>前端控制器：DispatcherServlet — 手动配置。作用：调用其它功能组件<br>处理器映射器：HandlerMapping<br>处理器适配器：HandlerAdapter<br>处理器：Handler<br>视图解析器：View Resolver<br>视图：View</li>
+<li>SpringMVC的注解和配置<br>请求映射注解：@RequestMapping<br>视图解析器配置：<br>REDIRECT_URL_PREFIX = “redirect:”<br>FORWARD_URL_PREFIX = “forward:”<br>prefix = “”;<br>suffix = “”;</li>
+</ul>
 
       
 
