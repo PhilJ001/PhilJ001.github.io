@@ -152,74 +152,6 @@
           <div id="js-content" class="content-ll">
             
   
-    <article id="post-First-Blog" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/05/02/First-Blog/">First Blog</a>
-    </h1>
-  
-
-        
-        <a href="/2018/05/02/First-Blog/" class="archive-article-date">
-  	<time datetime="2018-05-02T15:14:37.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-05-02</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>##第一章</p>
-<p>内容：</p>
-<hr>
-<p>##第二章</p>
-<p>内容：</p>
-<hr>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/05/02/First-Blog/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
     <article id="post-SpringMVC 组件解析" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -298,6 +230,115 @@
       
         <p class="article-more-link">
           <a class="article-more-a" href="/2018/04/01/SpringMVC%20%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
+    <article id="post-Spring与Web环境集成" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2018/03/01/Spring%E4%B8%8EWeb%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/">First Blog</a>
+    </h1>
+  
+
+        
+        <a href="/2018/03/01/Spring%E4%B8%8EWeb%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/" class="archive-article-date">
+  	<time datetime="2018-02-28T16:01:32.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-01</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h3 id="1-1-ApplicationContext应用上下文获取方式"><a href="#1-1-ApplicationContext应用上下文获取方式" class="headerlink" title="1.1 ApplicationContext应用上下文获取方式**"></a>1.1 ApplicationContext应用上下文获取方式**</h3><p>应用上下文对象是通过<strong>new ClasspathXmlApplicationContext(spring配置文件)</strong> 方式获取的，</p>
+<p>但是每次从容器中获得Bean时都要编写new ClasspathXmlApplicationContext(spring配置文件) ，</p>
+<p>这样的弊端是配置文件加载多次，应用上下文对象创建多次。</p>
+<p>在Web项目中，可以使用<strong>ServletContextListener</strong>监听Web应用的启动，我们可以在Web应用启动时，</p>
+<p>就加载Spring的配置文件，<strong>创建应用上下文对象ApplicationContext，在将其存储到最大的域servletContext域中</strong>，</p>
+<p>这样就可以在任意位置<strong>从域中获得应用上下文ApplicationContext对象了</strong>。</p>
+<h3 id="1-2-Spring提供获取应用上下文的工具"><a href="#1-2-Spring提供获取应用上下文的工具" class="headerlink" title="1.2 Spring提供获取应用上下文的工具"></a><strong>1.2 Spring提供获取应用上下文的工具</strong></h3><p>上面的分析不用手动实现，Spring提供了一个监听器ContextLoaderListener就是对上述功能的封装，</p>
+<p>该监听器内部加载Spring配置文件，创建应用上下文对象，并存储到ServletContext域中，</p>
+<p>提供了一个客户端工具WebApplicationContextUtils供使用者获得应用上下文对象。</p>
+<p>所以我们需要做的只有两件事：</p>
+<p><strong>①在**</strong>web.xml<strong><strong>中配置</strong></strong>ContextLoaderListener监听器<strong>**（导入spring-web坐标）</strong></p>
+<p><strong>②使用**</strong>WebApplicationContextUtils<strong><strong>获得应用上下文对象</strong></strong>ApplicationContext**</p>
+<hr>
+<h3 id="1-3-导入Spring集成web的坐标"><a href="#1-3-导入Spring集成web的坐标" class="headerlink" title="1.3 导入Spring集成web的坐标"></a><strong>1.3 导入Spring集成web的坐标</strong></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.springframework<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>spring-web<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.0.5.RELEASE<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="1-4-配置ContextLoaderListener监听器"><a href="#1-4-配置ContextLoaderListener监听器" class="headerlink" title="1.4 配置ContextLoaderListener监听器"></a><strong>1.4 配置ContextLoaderListener监听器</strong></h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--全局参数--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">context-param</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">param-name</span>&gt;</span>contextConfigLocation<span class="tag">&lt;/<span class="name">param-name</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">param-value</span>&gt;</span>classpath:applicationContext.xml<span class="tag">&lt;/<span class="name">param-value</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">context-param</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!--Spring的监听器--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;<span class="name">listener</span>&gt;</span></span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;<span class="name">listener-class</span>&gt;</span></span><br><span class="line"></span><br><span class="line">​     org.springframework.web.context.ContextLoaderListener</span><br><span class="line"></span><br><span class="line">   <span class="tag">&lt;/<span class="name">listener-class</span>&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="tag">&lt;/<span class="name">listener</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id=""><a href="#" class="headerlink" title=""></a></h3><h3 id="1-5-通过工具获得应用上下文对象"><a href="#1-5-通过工具获得应用上下文对象" class="headerlink" title="1.5 通过工具获得应用上下文对象"></a><strong>1.5 通过工具获得应用上下文对象</strong></h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ApplicationContext applicationContext =</span><br><span class="line"></span><br><span class="line">   WebApplicationContextUtils.getWebApplicationContext(servletContext);</span><br><span class="line"></span><br><span class="line">   Object obj = applicationContext.getBean(<span class="string">"id"</span>);</span><br></pre></td></tr></table></figure>
+
+<p>1.创建<strong>ContextLoaderListener监听器</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ContextLoaderListener</span> <span class="keyword">implements</span> <span class="title">ServletContextListener</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextInitialized</span><span class="params">(ServletContextEvent servletContextEvent)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">​    ServletContext servletContext = servletContextEvent.getServletContext();</span><br><span class="line"></span><br><span class="line">​    </span><br><span class="line"></span><br><span class="line">​     <span class="comment">//读取web.xml中的全局参数</span></span><br><span class="line"></span><br><span class="line">​    String contextConfigLocation = servletContext.getInitParameter(<span class="string">"contextConfigLocation"</span>);</span><br><span class="line"></span><br><span class="line">​    ApplicationContext app = <span class="keyword">new</span> ClassPathXmlApplicationContext(contextConfigLocation);</span><br><span class="line"></span><br><span class="line">​    </span><br><span class="line"></span><br><span class="line">​     <span class="comment">//将Spring的应用上下文对象存储到ServletContext域中</span></span><br><span class="line"></span><br><span class="line">​    servletContext.setAttribute(<span class="string">"app"</span>,app);</span><br><span class="line"></span><br><span class="line">​    System.out.println(<span class="string">"spring容器创建完毕...."</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">contextDestroyed</span><span class="params">(ServletContextEvent servletContextEvent)</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>2.创建<strong>WebApplicationContextUtils工具类 — 便于获取域中对象</strong></p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">WebApplicationContextUtils</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> ApplicationContext <span class="title">getWebApplicationContext</span><span class="params">(ServletContext servletContext)</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="keyword">return</span> (ApplicationContext) servletContext.getAttribute(<span class="string">"app"</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>3.servlet编写</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">UserServlet</span> <span class="keyword">extends</span> <span class="title">HttpServlet</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Override</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">protected</span> <span class="keyword">void</span> <span class="title">doGet</span><span class="params">(HttpServletRequest req, HttpServletResponse resp)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line"></span><br><span class="line">​    <span class="comment">//ApplicationContext app = new ClassPathXmlApplicationContext("applicationContext.xml");</span></span><br><span class="line"></span><br><span class="line">​    ServletContext servletContext = <span class="keyword">this</span>.getServletContext(); <span class="comment">//request.getServletContext()</span></span><br><span class="line"></span><br><span class="line">​    <span class="comment">//ApplicationContext app = (ApplicationContext) servletContext.getAttribute("app");</span></span><br><span class="line"></span><br><span class="line">​    <span class="comment">//ApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(servletContext);</span></span><br><span class="line"></span><br><span class="line">​    ApplicationContext app = WebApplicationContextUtils.getWebApplicationContext(servletContext);</span><br><span class="line"></span><br><span class="line">​    UserService userService = app.getBean(UserService<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">​    userService.save();</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><strong>知识要点</strong></p>
+<p>Spring集成web环境步骤</p>
+<p>①配置ContextLoaderListener监听器</p>
+<p>②使用WebApplicationContextUtils获得应用上下文</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring MVC</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2018/03/01/Spring%E4%B8%8EWeb%E7%8E%AF%E5%A2%83%E9%9B%86%E6%88%90/">展开全文 >></a>
         </p>
       
 
