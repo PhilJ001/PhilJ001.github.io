@@ -6,15 +6,27 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2018/4 | PhilJ</title>
+  <title>SpringMVC 技术总结3：文件上传、拦截器及异常处理 | PhilJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="PhilJ">
-<meta property="og:url" content="http://yoursite.com/archives/2018/04/index.html">
+  <meta name="description" content="SpringMVC的文件上传1-SpringMVC的请求-文件上传-客户端表单实现(应用)文件上传客户端表单需要满足： 表单项type&#x3D;“file” 表单的提交方式是post 表单的enctype属性是多部分表单形式，及enctype&#x3D;“multipart&#x2F;form-data” 12345&lt;form action&#x3D;&quot;$&amp;#123;pageContext.request.contextPath">
+<meta property="og:type" content="article">
+<meta property="og:title" content="SpringMVC 技术总结3：文件上传、拦截器及异常处理">
+<meta property="og:url" content="http://yoursite.com/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/index.html">
 <meta property="og:site_name" content="PhilJ">
+<meta property="og:description" content="SpringMVC的文件上传1-SpringMVC的请求-文件上传-客户端表单实现(应用)文件上传客户端表单需要满足： 表单项type&#x3D;“file” 表单的提交方式是post 表单的enctype属性是多部分表单形式，及enctype&#x3D;“multipart&#x2F;form-data” 12345&lt;form action&#x3D;&quot;$&amp;#123;pageContext.request.contextPath">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/5.jpg">
+<meta property="og:image" content="http://yoursite.com/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86//img/6.jpg">
+<meta property="og:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/1.png">
+<meta property="og:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/2.png">
+<meta property="og:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/3.jpg">
+<meta property="og:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.jpg">
+<meta property="article:published_time" content="2018-04-05T17:25:12.000Z">
+<meta property="article:modified_time" content="2020-03-06T09:22:53.486Z">
 <meta property="article:author" content="PhilJ">
+<meta property="article:tag" content="Spring MVC">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/5.jpg">
   
     <link rel="alternative" href="/atom.xml" title="PhilJ" type="application/atom+xml">
   
@@ -150,36 +162,185 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
+            <article id="post-2018-04-06-SpringMVC-技术总结3：文件上传、拦截器及异常处理" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
   
+    <h1 class="article-title" itemprop="name">
+      SpringMVC 技术总结3：文件上传、拦截器及异常处理
+    </h1>
   
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2018" class="archive-year">2018</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="archive-article-date">
+
+        
+        <a href="/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" class="archive-article-date">
   	<time datetime="2018-04-05T17:25:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-06</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/">SpringMVC 技术总结3：文件上传、拦截器及异常处理</a>
-    </h1>
-  
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="SpringMVC的文件上传"><a href="#SpringMVC的文件上传" class="headerlink" title="SpringMVC的文件上传"></a>SpringMVC的文件上传</h1><h3 id="1-SpringMVC的请求-文件上传-客户端表单实现-应用"><a href="#1-SpringMVC的请求-文件上传-客户端表单实现-应用" class="headerlink" title="1-SpringMVC的请求-文件上传-客户端表单实现(应用)"></a>1-SpringMVC的请求-文件上传-客户端表单实现(应用)</h3><p>文件上传客户端表单需要满足：</p>
+<p>表单项type=“file”</p>
+<p>表单的提交方式是post</p>
+<p>表单的enctype属性是多部分表单形式，及enctype=“multipart/form-data”</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"$&#123;pageContext.request.contextPath&#125;/user/quick22"</span> method=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">        名称&lt;input type=<span class="string">"text"</span> name=<span class="string">"username"</span>&gt;&lt;br/&gt;</span><br><span class="line">        文件<span class="number">1</span>&lt;input type=<span class="string">"file"</span> name=<span class="string">"uploadFile"</span>&gt;&lt;br/&gt;</span><br><span class="line">        &lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-        <div class="article-info info-on-right">
-          
+<h3 id="2-SpringMVC的请求-文件上传-文件上传的原理-理解"><a href="#2-SpringMVC的请求-文件上传-文件上传的原理-理解" class="headerlink" title="2-SpringMVC的请求-文件上传-文件上传的原理(理解)"></a>2-SpringMVC的请求-文件上传-文件上传的原理(理解)</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/5.jpg" alt=""></p>
+<h3 id="3-SpringMVC的请求-文件上传-单文件上传的代码实现1-应用"><a href="#3-SpringMVC的请求-文件上传-单文件上传的代码实现1-应用" class="headerlink" title="3-SpringMVC的请求-文件上传-单文件上传的代码实现1(应用)"></a>3-SpringMVC的请求-文件上传-单文件上传的代码实现1(应用)</h3><p>添加依赖</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>配置多媒体解析器</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置文件上传解析器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"multipartResolver"</span> <span class="attr">class</span>=<span class="string">"org.springframework.web.multipart.commons.CommonsMultipartResolver"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"defaultEncoding"</span> <span class="attr">value</span>=<span class="string">"UYF-8"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">"maxUploadSize"</span> <span class="attr">value</span>=<span class="string">"500000"</span>/&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>后台程序</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/quick22"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save22</span><span class="params">(String username, MultipartFile uploadFile)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(username);</span><br><span class="line">       	System.out.println(uploadFile);</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="4-SpringMVC的请求-文件上传-单文件上传的代码实现2-应用"><a href="#4-SpringMVC的请求-文件上传-单文件上传的代码实现2-应用" class="headerlink" title="4-SpringMVC的请求-文件上传-单文件上传的代码实现2(应用)"></a>4-SpringMVC的请求-文件上传-单文件上传的代码实现2(应用)</h3><p>完成文件上传</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/quick22"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save22</span><span class="params">(String username, MultipartFile uploadFile)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(username);</span><br><span class="line">        <span class="comment">//获得上传文件的名称</span></span><br><span class="line">        String originalFilename = uploadFile.getOriginalFilename();</span><br><span class="line">        uploadFile.transferTo(<span class="keyword">new</span> File(<span class="string">"C:\\upload\\"</span>+originalFilename));</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="5-SpringMVC的请求-文件上传-多文件上传的代码实现-应用"><a href="#5-SpringMVC的请求-文件上传-多文件上传的代码实现-应用" class="headerlink" title="5-SpringMVC的请求-文件上传-多文件上传的代码实现(应用)"></a>5-SpringMVC的请求-文件上传-多文件上传的代码实现(应用)</h3><p>多文件上传，只需要将页面修改为多个文件上传项，将方法参数MultipartFile类型修改为MultipartFile[]即可</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"$&#123;pageContext.request.contextPath&#125;/user/quick23"</span> method=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">        名称&lt;input type=<span class="string">"text"</span> name=<span class="string">"username"</span>&gt;&lt;br/&gt;</span><br><span class="line">        文件<span class="number">1</span>&lt;input type=<span class="string">"file"</span> name=<span class="string">"uploadFile"</span>&gt;&lt;br/&gt;</span><br><span class="line">        文件<span class="number">2</span>&lt;input type=<span class="string">"file"</span> name=<span class="string">"uploadFile"</span>&gt;&lt;br/&gt;</span><br><span class="line">        &lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/quick23"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save23</span><span class="params">(String username, MultipartFile[] uploadFile)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(username);</span><br><span class="line">        <span class="keyword">for</span> (MultipartFile multipartFile : uploadFile) &#123;</span><br><span class="line">            String originalFilename = multipartFile.getOriginalFilename();</span><br><span class="line">            multipartFile.transferTo(<span class="keyword">new</span> File(<span class="string">"C:\\upload\\"</span>+originalFilename));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="6-SpringMVC的请求-知识要点-理解，记忆"><a href="#6-SpringMVC的请求-知识要点-理解，记忆" class="headerlink" title="6-SpringMVC的请求-知识要点(理解，记忆)"></a>6-SpringMVC的请求-知识要点(理解，记忆)</h3><p><img src=".//img/6.jpg" alt=""></p>
+<h1 id="SpringMVC的拦截器"><a href="#SpringMVC的拦截器" class="headerlink" title="SpringMVC的拦截器"></a>SpringMVC的拦截器</h1><h2 id="01-SpringMVC拦截器-拦截器的作用-理解"><a href="#01-SpringMVC拦截器-拦截器的作用-理解" class="headerlink" title="01-SpringMVC拦截器-拦截器的作用(理解)"></a>01-SpringMVC拦截器-拦截器的作用(理解)</h2><p>Spring MVC 的拦截器类似于 Servlet  开发中的过滤器 Filter，用于对处理器进行预处理和后处理。</p>
+<p>将拦截器按一定的顺序联结成一条链，这条链称为拦截器链（InterceptorChain）。在访问被拦截的方法或字段时，拦截器链中的拦截器就会按其之前定义的顺序被调用。拦截器也是AOP思想的具体实现。</p>
+<h2 id="02-SpringMVC拦截器-interceptor和filter区别-理解，记忆"><a href="#02-SpringMVC拦截器-interceptor和filter区别-理解，记忆" class="headerlink" title="02-SpringMVC拦截器-interceptor和filter区别(理解，记忆)"></a>02-SpringMVC拦截器-interceptor和filter区别(理解，记忆)</h2><p>关于interceptor和filter的区别，如图所示：</p>
+<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/1.png" alt=""></p>
+<h2 id="03-SpringMVC拦截器-快速入门-应用"><a href="#03-SpringMVC拦截器-快速入门-应用" class="headerlink" title="03-SpringMVC拦截器-快速入门(应用)"></a>03-SpringMVC拦截器-快速入门(应用)</h2><p>自定义拦截器很简单，只有如下三步：</p>
+<p>①创建拦截器类实现HandlerInterceptor接口</p>
+<p>②配置拦截器</p>
+<p>③测试拦截器的拦截效果</p>
+<p>编写拦截器：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInterceptor1</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="comment">//在目标方法执行之前 执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"preHandle....."</span>);</span><br><span class="line">&#125;</span><br><span class="line">    <span class="comment">//在目标方法执行之后 视图对象返回之前执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> </span>&#123;</span><br><span class="line">System.out.println(<span class="string">"postHandle..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//在流程都执行完毕后 执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"afterCompletion...."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置：在SpringMVC的配置文件中配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置拦截器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--对哪些资源执行拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">"/**"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.itheima.interceptor.MyInterceptor1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mvc:interceptors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>编写测试程序测试：</p>
+<p>编写Controller,发请求到controller,跳转页面</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Controller</span></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">TargetController</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="meta">@RequestMapping</span>(<span class="string">"/target"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">show</span><span class="params">()</span></span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"目标资源执行......"</span>);</span><br><span class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">        modelAndView.addObject(<span class="string">"name"</span>,<span class="string">"itcast"</span>);</span><br><span class="line">        modelAndView.setViewName(<span class="string">"index"</span>);</span><br><span class="line">        <span class="keyword">return</span> modelAndView;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>页面</p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;html&gt;</span><br><span class="line">&lt;body&gt;</span><br><span class="line">&lt;h2&gt;Hello World! $&#123;name&#125;&lt;/h2&gt;</span><br><span class="line">&lt;/body&gt;</span><br><span class="line">&lt;/html&gt;</span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="04-SpringMVC拦截器-快速入门详解-应用"><a href="#04-SpringMVC拦截器-快速入门详解-应用" class="headerlink" title="04-SpringMVC拦截器-快速入门详解(应用)"></a>04-SpringMVC拦截器-快速入门详解(应用)</h2><p>拦截器在预处理后什么情况下会执行目标资源，什么情况下不执行目标资源，以及在有多个拦截器的情况下拦截器的执行顺序是什么?</p>
+<p>再编写一个拦截器2，</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyInterceptor2</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="comment">//在目标方法执行之前 执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> ServletException, IOException </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"preHandle22222....."</span>);</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在目标方法执行之后 视图对象返回之前执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">postHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, ModelAndView modelAndView)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"postHandle2222..."</span>);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//在流程都执行完毕后 执行</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">afterCompletion</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler, Exception ex)</span> </span>&#123;</span><br><span class="line">        System.out.println(<span class="string">"afterCompletion2222...."</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>配置拦截器2</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置拦截器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--对哪些资源执行拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">"/**"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.itheima.interceptor.MyInterceptor2"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--对哪些资源执行拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">"/**"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.itheima.interceptor.MyInterceptor1"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mvc:interceptors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>结论：</p>
+<p>当拦截器的preHandle方法返回true则会执行目标资源，如果返回false则不执行目标资源</p>
+<p>多个拦截器情况下，配置在前的先执行，配置在后的后执行</p>
+<p>拦截器中的方法执行顺序是：preHandler——-目标资源—-postHandle—- afterCompletion</p>
+<h2 id="05-SpringMVC拦截器-知识小结-记忆"><a href="#05-SpringMVC拦截器-知识小结-记忆" class="headerlink" title="05-SpringMVC拦截器-知识小结(记忆)"></a>05-SpringMVC拦截器-知识小结(记忆)</h2><p>拦截器中的方法说明如下</p>
+<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/2.png" alt=""></p>
+<h2 id="06-SpringMVC拦截器-用户登录权限控制分析-理解"><a href="#06-SpringMVC拦截器-用户登录权限控制分析-理解" class="headerlink" title="06-SpringMVC拦截器-用户登录权限控制分析(理解)"></a>06-SpringMVC拦截器-用户登录权限控制分析(理解)</h2><p>在day06-Spring练习案例的基础之上：用户没有登录的情况下，不能对后台菜单进行访问操作，点击菜单跳转到登录页面，只有用户登录成功后才能进行后台功能的操作</p>
+<p>需求图：</p>
+<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/3.jpg" alt=""></p>
+<h2 id="07-SpringMVC拦截器-用户登录权限控制代码实现1-应用"><a href="#07-SpringMVC拦截器-用户登录权限控制代码实现1-应用" class="headerlink" title="07-SpringMVC拦截器-用户登录权限控制代码实现1(应用)"></a>07-SpringMVC拦截器-用户登录权限控制代码实现1(应用)</h2><p>判断用户是否登录  本质：判断session中有没有user，如果没有登陆则先去登陆，如果已经登陆则直接放行访问目标资源</p>
+<p>先编写拦截器如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrivilegeInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//逻辑：判断用户是否登录  本质：判断session中有没有user</span></span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        User user = (User) session.getAttribute(<span class="string">"user"</span>);</span><br><span class="line">        <span class="keyword">if</span>(user==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">//没有登录</span></span><br><span class="line">            response.sendRedirect(request.getContextPath()+<span class="string">"/login.jsp"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//放行  访问目标资源</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>然后配置该拦截器：找到项目案例的spring-mvc.xml，添加如下配置：</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置权限拦截器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置对哪些资源执行拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">"/**"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.itheima.interceptor.PrivilegeInterceptor"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mvc:interceptors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="08-SpringMVC拦截器-用户登录权限控制代码实现2-应用"><a href="#08-SpringMVC拦截器-用户登录权限控制代码实现2-应用" class="headerlink" title="08-SpringMVC拦截器-用户登录权限控制代码实现2(应用)"></a>08-SpringMVC拦截器-用户登录权限控制代码实现2(应用)</h2><p>在登陆页面输入用户名密码，点击登陆，通过用户名密码进行查询，如果登陆成功，则将用户信息实体存入session，然后跳转到首页，如果登陆失败则继续回到登陆页面</p>
+<p>在UserController中编写登陆逻辑</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/login"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">login</span><span class="params">(String username,String password,HttpSession session)</span></span>&#123;</span><br><span class="line">        User user = userService.login(username,password);</span><br><span class="line">        <span class="keyword">if</span>(user!=<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">//登录成功  将user存储到session</span></span><br><span class="line">            session.setAttribute(<span class="string">"user"</span>,user);</span><br><span class="line">            <span class="keyword">return</span> <span class="string">"redirect:/index.jsp"</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"redirect:/login.jsp"</span>;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>service层代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//service层</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">login</span><span class="params">(String username, String password)</span> </span>&#123;</span><br><span class="line">            User user = userDao.findByUsernameAndPassword(username,password);</span><br><span class="line">            <span class="keyword">return</span> user;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>dao层代码如下：</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//dao层</span></span><br><span class="line"> <span class="function"><span class="keyword">public</span> User <span class="title">findByUsernameAndPassword</span><span class="params">(String username, String password)</span> <span class="keyword">throws</span> EmptyResultDataAccessException</span>&#123;</span><br><span class="line">        User user = jdbcTemplate.queryForObject(<span class="string">"select * from sys_user where username=? and password=?"</span>, <span class="keyword">new</span> BeanPropertyRowMapper&lt;User&gt;(User<span class="class">.<span class="keyword">class</span>), <span class="title">username</span>, <span class="title">password</span>)</span>;</span><br><span class="line">        <span class="keyword">return</span> user;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<p>此时仍然登陆不上，因为我们需要将登陆请求url让拦截器放行,添加资源排除的配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置权限拦截器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">mvc:interceptors</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置对哪些资源执行拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:mapping</span> <span class="attr">path</span>=<span class="string">"/**"</span>/&gt;</span></span><br><span class="line">            <span class="comment">&lt;!--配置哪些资源排除拦截操作--&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">mvc:exclude-mapping</span> <span class="attr">path</span>=<span class="string">"/user/login"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">"com.itheima.interceptor.PrivilegeInterceptor"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">mvc:interceptor</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">mvc:interceptors</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="09-SpringMVC拦截器-用户登录权限控制代码实现3-应用"><a href="#09-SpringMVC拦截器-用户登录权限控制代码实现3-应用" class="headerlink" title="09-SpringMVC拦截器-用户登录权限控制代码实现3(应用)"></a>09-SpringMVC拦截器-用户登录权限控制代码实现3(应用)</h2><p>JdbcTemplate.queryForObject对象如果查询不到数据会抛异常，导致程序无法达到预期效果，如何来解决该问题？</p>
+<p>在业务层处理来自dao层的异常，如果出现异常service层返回null,而不是将异常抛给controller</p>
+<p>因此改造登陆的业务层代码,添加异常的控制</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> User <span class="title">login</span><span class="params">(String username, String password)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">try</span> &#123;</span><br><span class="line">            User user = userDao.findByUsernameAndPassword(username,password);</span><br><span class="line">            <span class="keyword">return</span> user;</span><br><span class="line">        &#125;<span class="keyword">catch</span> (EmptyResultDataAccessException e)&#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">null</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="1-SpringMVC异常处理机制"><a href="#1-SpringMVC异常处理机制" class="headerlink" title="1. SpringMVC异常处理机制"></a>1. SpringMVC异常处理机制</h2><h3 id="1-1-异常处理的思路"><a href="#1-1-异常处理的思路" class="headerlink" title="1.1 异常处理的思路"></a>1.1 异常处理的思路</h3><p>系统中异常包括两类：预期异常和运行时异常RuntimeException，前者通过捕获异常从而获取异常信息，后者主要通过规范代码开发、测试等手段减少运行时异常的发生。</p>
+<p>系统的Dao、Service、Controller出现都通过throws Exception向上抛出，最后由SpringMVC前端控制器交由异常处理器进行异常处理，如下图：</p>
+<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.jpg" alt="1551078013501"></p>
+<h3 id="1-2-异常处理两种方式"><a href="#1-2-异常处理两种方式" class="headerlink" title="1.2 异常处理两种方式"></a>1.2 异常处理两种方式</h3><p>① 使用Spring MVC提供的简单异常处理器SimpleMappingExceptionResolver</p>
+<p>② 实现Spring的异常处理接口HandlerExceptionResolver 自定义自己的异常处理器</p>
+<h3 id="1-3-简单异常处理器SimpleMappingExceptionResolver"><a href="#1-3-简单异常处理器SimpleMappingExceptionResolver" class="headerlink" title="1.3 简单异常处理器SimpleMappingExceptionResolver"></a>1.3 简单异常处理器SimpleMappingExceptionResolver</h3><p>SpringMVC已经定义好了该类型转换器，在使用时可以根据项目情况进行相应异常与视图的映射配置</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--配置简单映射异常处理器--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">bean</span> <span class="attr">class</span>=<span class="string">“org.springframework.web.servlet.handler.SimpleMappingExceptionResolver”</span>&gt;</span>    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">“defaultErrorView”</span> <span class="attr">value</span>=<span class="string">“error”/</span>&gt;</span>   默认错误视图</span><br><span class="line">    <span class="tag">&lt;<span class="name">property</span> <span class="attr">name</span>=<span class="string">“exceptionMappings”</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">map</span>&gt;</span>		异常类型		                             错误视图</span><br><span class="line">            <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"com.itheima.exception.MyException"</span> <span class="attr">value</span>=<span class="string">"error"</span>/&gt;</span></span><br><span class="line">            <span class="tag">&lt;<span class="name">entry</span> <span class="attr">key</span>=<span class="string">"java.lang.ClassCastException"</span> <span class="attr">value</span>=<span class="string">"error"</span>/&gt;</span></span><br><span class="line">        <span class="tag">&lt;/<span class="name">map</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">property</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">bean</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="1-4-自定义异常处理步骤"><a href="#1-4-自定义异常处理步骤" class="headerlink" title="1.4 自定义异常处理步骤"></a>1.4 自定义异常处理步骤</h3><p>①创建异常处理器类实现HandlerExceptionResolver</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">MyExceptionResolver</span> <span class="keyword">implements</span> <span class="title">HandlerExceptionResolver</span> </span>&#123;</span><br><span class="line"><span class="meta">@Override</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> ModelAndView <span class="title">resolveException</span><span class="params">(HttpServletRequest request, </span></span></span><br><span class="line"><span class="function"><span class="params">    HttpServletResponse response, Object handler, Exception ex)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//处理异常的代码实现</span></span><br><span class="line">    <span class="comment">//创建ModelAndView对象</span></span><br><span class="line">    ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView(); </span><br><span class="line">    modelAndView.setViewName(<span class="string">"exceptionPage"</span>);</span><br><span class="line">    <span class="keyword">return</span> modelAndView;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>②配置异常处理器</p>
+<figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">bean</span> <span class="attr">id</span>=<span class="string">"exceptionResolver"</span>        </span></span><br><span class="line"><span class="tag">      <span class="attr">class</span>=<span class="string">"com.itheima.exception.MyExceptionResolver"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>③编写异常页面</p>
+<figure class="highlight html"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">%@</span> <span class="attr">page</span> <span class="attr">contentType</span>=<span class="string">"text/html;charset=UTF-8"</span> <span class="attr">language</span>=<span class="string">"java"</span> %&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></span><br><span class="line">	<span class="tag">&lt;<span class="name">title</span>&gt;</span>Title<span class="tag">&lt;/<span class="name">title</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></span><br><span class="line">	这是一个最终异常的显示页面</span><br><span class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></span><br></pre></td></tr></table></figure>
+
+<p>④测试异常跳转</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(<span class="string">"/quick22"</span>)</span><br><span class="line"><span class="meta">@ResponseBody</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">quickMethod22</span><span class="params">()</span> <span class="keyword">throws</span> IOException, ParseException </span>&#123;</span><br><span class="line">    SimpleDateFormat simpleDateFormat = <span class="keyword">new</span> SimpleDateFormat(<span class="string">"yyyy-MM-dd"</span>); </span><br><span class="line">    simpleDateFormat.parse(<span class="string">"abcde"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1-5-知识要点"><a href="#1-5-知识要点" class="headerlink" title="1.5 知识要点"></a>1.5 知识要点</h3><p>异常处理方式</p>
+<pre><code>配置简单异常处理器SimpleMappingExceptionResolver
+
+自定义异常处理器</code></pre><p>自定义异常处理步骤</p>
+<pre><code>①创建异常处理器类实现HandlerExceptionResolver
+
+②配置异常处理器
+
+③编写异常页面
+
+④测试异常跳转</code></pre><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+      
+
+      
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                    <div class="reward-box-item">
+                      <img class="reward-img" src="http://q6ohcurw1.bkt.clouddn.com/IMG_9595%2820200305-005920%29.PNG">
+                      <span class="reward-type">微信</span>
+                    </div>
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -191,95 +352,106 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2018/04/06/2018-04-06-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%933%EF%BC%9A%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
+
   
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/05/2018-04-05-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%932%EF%BC%9A%E8%AF%B7%E6%B1%82&%E5%93%8D%E5%BA%94/" class="archive-article-date">
-  	<time datetime="2018-04-04T16:24:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-05</time>
-</a>
+<nav id="article-nav">
+  
+  
+    <a href="/2018/04/05/2018-04-05-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%932%EF%BC%9A%E8%AF%B7%E6%B1%82&%E5%93%8D%E5%BA%94/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">SpringMVC 技术总结2：请求&amp;响应</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
+        
+        
+    </div>
+</aside>
+
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/05/2018-04-05-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%932%EF%BC%9A%E8%AF%B7%E6%B1%82&%E5%93%8D%E5%BA%94/">SpringMVC 技术总结2：请求&amp;响应</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring MVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2018/04/01/2018-04-01-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%931%EF%BC%9A%E5%85%A5%E9%97%A8/" class="archive-article-date">
-  	<time datetime="2018-03-31T16:02:12.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-04-01</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2018/04/01/2018-04-01-SpringMVC-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%931%EF%BC%9A%E5%85%A5%E9%97%A8/">SpringMVC 技术总结1：入门</a>
-    </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">Spring MVC</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
 
 
           </div>
@@ -302,8 +474,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
