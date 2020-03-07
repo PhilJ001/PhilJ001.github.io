@@ -152,6 +152,75 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Hexo上传的图片在网页上无法显示的解决办法" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2020/03/07/Hexo%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">Hexo上传的图片在网页上无法显示的解决办法</a>
+    </h1>
+  
+
+        
+        <a href="/2020/03/07/Hexo%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/" class="archive-article-date">
+  	<time datetime="2020-03-07T09:43:05.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-03-07</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>1.找到Hexo下的_config.yml里的post_asset_folder，把这个选项从false改成true。</p>
+<p>2.在Hexo目录下打开Git Brsh，执行一个下载上传图片插件的命令npm install hexo-asset-image –save。</p>
+<p>3.继续在Git Brsh下利用hexo n “Hexo上传的图片在网页上无法显示的解决办法”来生成md的文件（” “里的内容填自己的文件名），这时就会在同级的目录下生成一个同名的文件夹。</p>
+<p>第二步<br>1.在.md的文件中要插入图片时，先要把所要插入的图片放在生成的同名文件夹下。</p>
+<p>2.利用markdown的语法将文件引入文章中。</p>
+<p>3.最后再提交一下</p>
+<p>hexo clean –&gt;hexo generate –&gt;hexo deploy</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2020/03/07/Hexo%E4%B8%8A%E4%BC%A0%E7%9A%84%E5%9B%BE%E7%89%87%E5%9C%A8%E7%BD%91%E9%A1%B5%E4%B8%8A%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E7%9A%84%E8%A7%A3%E5%86%B3%E5%8A%9E%E6%B3%95/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-对与19年电商项目高并发处理的总结" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -172,7 +241,7 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p><img src="/Users/philj/Desktop/HEXO/img/WX20200307-173643@2x.png" alt="WX20200307-173643@2x"></p>
+        <p><img src="/.com//philj/blog/source/_posts/%E5%AF%B9%E4%B8%8E19%E5%B9%B4%E7%94%B5%E5%95%86%E9%A1%B9%E7%9B%AE%E9%AB%98%E5%B9%B6%E5%8F%91%E5%A4%84%E7%90%86%E7%9A%84%E6%80%BB%E7%BB%93/WX20200307-173643@2x.png" alt="WX20200307-173643@2x"></p>
 
       
 
@@ -181,6 +250,17 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">项目总结</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -236,7 +316,7 @@
     <div class="article-entry" itemprop="articleBody">
       
         <h1 id="分布式RPC框架Apache-Dubbo"><a href="#分布式RPC框架Apache-Dubbo" class="headerlink" title="分布式RPC框架Apache Dubbo"></a>分布式RPC框架Apache Dubbo</h1><h2 id="1-软件架构的演进过程"><a href="#1-软件架构的演进过程" class="headerlink" title="1. 软件架构的演进过程"></a>1. 软件架构的演进过程</h2><p>软件架构的发展经历了由单体架构、垂直架构、SOA架构到微服务架构的演进过程，下面我们分别了解一下这几个架构。</p>
-<h3 id="1-1-单体架构"><a href="#1-1-单体架构" class="headerlink" title="1.1 单体架构"></a>1.1 单体架构</h3><p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/1.png" alt="1"></p>
+<h3 id="1-1-单体架构"><a href="#1-1-单体架构" class="headerlink" title="1.1 单体架构"></a>1.1 单体架构</h3><p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/1.png" alt="1"></p>
 <p>架构说明：</p>
 <p>​      全部功能集中在一个项目内（All in one）。</p>
 <p>架构优点：</p>
@@ -245,7 +325,7 @@
 <p>​       全部功能集成在一个工程中，对于大型项目不易开发、扩展和维护。</p>
 <p>​       技术栈受限，只能使用一种语言开发。</p>
 <p>​       系统性能扩展只能通过扩展集群节点，成本高。</p>
-<h3 id="1-2-垂直架构"><a href="#1-2-垂直架构" class="headerlink" title="1.2 垂直架构"></a>1.2 垂直架构</h3><p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/18.png" alt="18"></p>
+<h3 id="1-2-垂直架构"><a href="#1-2-垂直架构" class="headerlink" title="1.2 垂直架构"></a>1.2 垂直架构</h3><p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/18.png" alt="18"></p>
 <p>架构说明：       </p>
 <p>​      按照业务进行切割，形成小的单体项目。</p>
 <p>架构优点：</p>
@@ -256,7 +336,7 @@
 <p>​       项目之间功能冗余、数据冗余、耦合性强。</p>
 <h3 id="1-3-SOA架构"><a href="#1-3-SOA架构" class="headerlink" title="1.3 SOA架构"></a>1.3 SOA架构</h3><p>SOA全称为Service-Oriented Architecture，即面向服务的架构。它可以根据需求通过网络对松散耦合的粗粒度应用组件(服务)进行分布式部署、组合和使用。一个服务通常以独立的形式存在于操作系统进程中。</p>
 <p>站在功能的角度，把业务逻辑抽象成可复用的服务，通过服务的编排实现业务的快速再生，目的：把原先固有的业务功能转变为通用的业务服务，实现业务逻辑的快速复用。</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/19.png" alt="19"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/19.png" alt="19"></p>
 <p>架构说明：</p>
 <p>​      将重复功能或模块抽取成组件的形式，对外提供服务，在项目与服务之间使用ESB（企业服务总线）的形式作为通信的桥梁。</p>
 <p>架构优点：</p>
@@ -267,7 +347,7 @@
 <p>​       各系统之间业务不同，很难确认功能或模块是重复的。</p>
 <p>​       抽取服务的粒度大。</p>
 <p>​       系统和服务之间耦合度高。</p>
-<h3 id="1-4-微服务架构"><a href="#1-4-微服务架构" class="headerlink" title="1.4 微服务架构"></a>1.4 微服务架构</h3><p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/20.png" alt="20"></p>
+<h3 id="1-4-微服务架构"><a href="#1-4-微服务架构" class="headerlink" title="1.4 微服务架构"></a>1.4 微服务架构</h3><p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/20.png" alt="20"></p>
 <p>架构说明：</p>
 <p>​       将系统服务层完全独立出来，抽取为一个一个的微服务。</p>
 <p>​       抽取的粒度更细，遵循单一原则。</p>
@@ -287,7 +367,7 @@
 <p>Dubbo官网地址：<a href="http://dubbo.apache.org" target="_blank" rel="noopener">http://dubbo.apache.org</a></p>
 <p>Dubbo提供了三大核心能力：面向接口的远程方法调用，智能容错和负载均衡，以及服务自动注册和发现。</p>
 <h3 id="2-2-Dubbo架构"><a href="#2-2-Dubbo架构" class="headerlink" title="2.2 Dubbo架构"></a>2.2 Dubbo架构</h3><p>Dubbo架构图（Dubbo官方提供）如下：</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/2.png" alt="2"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/2.png" alt="2"></p>
 <p>节点角色说明：</p>
 <table>
 <thead>
@@ -330,10 +410,10 @@
 <h2 id="3-服务注册中心Zookeeper"><a href="#3-服务注册中心Zookeeper" class="headerlink" title="3. 服务注册中心Zookeeper"></a>3. 服务注册中心Zookeeper</h2><p>通过前面的Dubbo架构图可以看到，Registry（服务注册中心）在其中起着至关重要的作用。Dubbo官方推荐使用Zookeeper作为服务注册中心。</p>
 <h3 id="3-1-Zookeeper介绍"><a href="#3-1-Zookeeper介绍" class="headerlink" title="3.1 Zookeeper介绍"></a>3.1 Zookeeper介绍</h3><p>Zookeeper 是 Apache Hadoop 的子项目，是一个树型的目录服务，支持变更推送，适合作为 Dubbo 服务的注册中心，工业强度较高，可用于生产环境，并推荐使用 。</p>
 <p>为了便于理解Zookeeper的树型目录服务，我们先来看一下我们电脑的文件系统(也是一个树型目录结构)：</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/4.png" alt="4"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/4.png" alt="4"></p>
 <p>我的电脑可以分为多个盘符（例如C、D、E等），每个盘符下可以创建多个目录，每个目录下面可以创建文件，也可以创建子目录，最终构成了一个树型结构。通过这种树型结构的目录，我们可以将文件分门别类的进行存放，方便我们后期查找。而且磁盘上的每个文件都有一个唯一的访问路径，例如：C:\Windows\itcast\hello.txt。</p>
 <p>Zookeeper树型目录服务：</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/3.png" alt="3"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/3.png" alt="3"></p>
 <p>流程说明：</p>
 <ul>
 <li>服务提供者(Provider)启动时: 向 <code>/dubbo/com.foo.BarService/providers</code> 目录下写入自己的 URL 地址</li>
@@ -398,12 +478,12 @@
 <p>（4）重启tomcat</p>
 <h3 id="5-2-使用"><a href="#5-2-使用" class="headerlink" title="5.2 使用"></a>5.2 使用</h3><p>操作步骤：</p>
 <p>（1）访问<a href="http://localhost:8080/dubbo-admin-2.6.0/，输入用户名(root)和密码(root)" target="_blank" rel="noopener">http://localhost:8080/dubbo-admin-2.6.0/，输入用户名(root)和密码(root)</a></p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/5.png" alt="5"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/5.png" alt="5"></p>
 <p>（2）启动服务提供者工程和服务消费者工程，可以在查看到对应的信息</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/6.png" alt="6"></p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/7.png" alt="7"></p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/8.png" alt="8"></p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/9.png" alt="9"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/6.png" alt="6"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/7.png" alt="7"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/8.png" alt="8"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/9.png" alt="9"></p>
 <h2 id="6-Dubbo相关配置说明"><a href="#6-Dubbo相关配置说明" class="headerlink" title="6. Dubbo相关配置说明"></a>6. Dubbo相关配置说明</h2><h3 id="6-1-包扫描"><a href="#6-1-包扫描" class="headerlink" title="6.1 包扫描"></a>6.1 包扫描</h3><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dubbo:annotation</span> <span class="attr">package</span>=<span class="string">"com.itheima.service"</span> /&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>服务提供者和服务消费者都需要配置，表示包扫描，作用是扫描指定包(包括子包)下的类。</p>
@@ -450,24 +530,24 @@
 <p>上面连接的数据库可以自行创建</p>
 <p>（3）在HelloServiceImpl类上加入@Transactional注解</p>
 <p>（4）启动服务提供者和服务消费者，并访问</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/12.png" alt="12"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/12.png" alt="12"></p>
 <p>上面的错误为没有可用的服务提供者</p>
 <p>查看dubbo管理控制台发现服务并没有发布，如下：</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/13.png" alt="13"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/13.png" alt="13"></p>
 <p>可以通过断点调试的方式查看Dubbo执行过程，Dubbo通过AnnotationBean的postProcessAfterInitialization方法进行处理</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/14.png" alt="14"></p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/15.png" alt="15"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/14.png" alt="14"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/15.png" alt="15"></p>
 <h3 id="7-2-解决方案"><a href="#7-2-解决方案" class="headerlink" title="7.2 解决方案"></a>7.2 解决方案</h3><p>通过上面的断点调试可以看到，在HelloServiceImpl类上加入事务注解后，Spring会为此类基于JDK动态代理技术创建代理对象，创建的代理对象完整类名为com.sun.proxy.$Proxy35，导致Dubbo在进行包匹配时没有成功（因为我们在发布服务时扫描的包为com.itheima.service），所以后面真正发布服务的代码没有执行。</p>
 <p>解决方式操作步骤：</p>
 <p>（1）修改applicationContext-service.xml配置文件，开启事务控制注解支持时指定proxy-target-class属性，值为true。其作用是使用cglib代理方式为Service类创建代理对象</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--开启事务控制的注解支持--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">tx:annotation-driven</span> <span class="attr">transaction-manager</span>=<span class="string">"transactionManager"</span> <span class="attr">proxy-target-class</span>=<span class="string">"true"</span>/&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/17.png" alt="17"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/17.png" alt="17"></p>
 <p>（2）修改HelloServiceImpl类，在Service注解中加入interfaceClass属性，值为HelloService.class，作用是指定服务的接口类型</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Service</span>(interfaceClass = HelloService<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class">@<span class="title">Transactional</span></span></span><br><span class="line"><span class="class"><span class="title">public</span> <span class="title">class</span> <span class="title">HelloServiceImpl</span> <span class="keyword">implements</span> <span class="title">HelloService</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> String <span class="title">sayHello</span><span class="params">(String name)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">return</span> <span class="string">"hello "</span> + name;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>此处也是必须要修改的，否则会导致发布的服务接口为SpringProxy，而不是HelloService接口，如下：</p>
-<p><img src="/Users/philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/16.png" alt="16"></p>
+<p><img src="/.com//philj/blog/source/_posts/2018-05-03-Dubbo-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%93/16.png" alt="16"></p>
 
       
 
@@ -543,28 +623,28 @@
       
         <h3 id="1-Mybatis多表查询"><a href="#1-Mybatis多表查询" class="headerlink" title="1.Mybatis多表查询"></a>1.Mybatis多表查询</h3><h4 id="1-1-一对一查询"><a href="#1-1-一对一查询" class="headerlink" title="1.1 一对一查询"></a>1.1 一对一查询</h4><h5 id="1-1-1-一对一查询的模型MapperScannerConfigurer"><a href="#1-1-1-一对一查询的模型MapperScannerConfigurer" class="headerlink" title="1.1.1 一对一查询的模型MapperScannerConfigurer"></a>1.1.1 一对一查询的模型MapperScannerConfigurer</h5><p>用户表和订单表的关系为，一个用户有多个订单，一个订单只从属于一个用户</p>
 <p>一对一查询的需求：查询一个订单，与此同时查询出该订单所属的用户</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt></p>
 <h5 id="1-1-2一对一查询的语句"><a href="#1-1-2一对一查询的语句" class="headerlink" title="1.1.2一对一查询的语句"></a>1.1.2一对一查询的语句</h5><p>对应的sql语句：select *  from orders o,user u where o.uid=u.id;</p>
 <p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt></p>
 <h5 id="1-1-3-创建Order和User实体"><a href="#1-1-3-创建Order和User实体" class="headerlink" title="1.1.3 创建Order和User实体"></a>1.1.3 创建Order和User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> Date ordertime;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> total;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//代表当前订单从属于哪一个客户</span></span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-1-4-创建OrderMapper接口"><a href="#1-1-4-创建OrderMapper接口" class="headerlink" title="1.1.4 创建OrderMapper接口"></a>1.1.4 创建OrderMapper接口</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OrderMapper</span> </span>&#123;</span><br><span class="line">    <span class="function">List&lt;Order&gt; <span class="title">findAll</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-1-5-配置OrderMapper-xml"><a href="#1-1-5-配置OrderMapper-xml" class="headerlink" title="1.1.5 配置OrderMapper.xml"></a>1.1.5 配置OrderMapper.xml</h5><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"com.itheima.mapper.OrderMapper"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"orderMap"</span> <span class="attr">type</span>=<span class="string">"com.itheima.domain.Order"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"uid"</span> <span class="attr">property</span>=<span class="string">"user.id"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">property</span>=<span class="string">"user.username"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">property</span>=<span class="string">"user.password"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"birthday"</span> <span class="attr">property</span>=<span class="string">"user.birthday"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findAll"</span> <span class="attr">resultMap</span>=<span class="string">"orderMap"</span>&gt;</span></span><br><span class="line">        select * from orders o,user u where o.uid=u.id</span><br><span class="line">    <span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<p>其中<resultMap>还可以配置如下：</p>
+<p>其中<resultMap>还可以配置如下：</resultMap></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">resultMap</span> <span class="attr">id</span>=<span class="string">"orderMap"</span> <span class="attr">type</span>=<span class="string">"com.itheima.domain.Order"</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">"id"</span> <span class="attr">column</span>=<span class="string">"id"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">"ordertime"</span> <span class="attr">column</span>=<span class="string">"ordertime"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">result</span> <span class="attr">property</span>=<span class="string">"total"</span> <span class="attr">column</span>=<span class="string">"total"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">association</span> <span class="attr">property</span>=<span class="string">"user"</span> <span class="attr">javaType</span>=<span class="string">"com.itheima.domain.User"</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"uid"</span> <span class="attr">property</span>=<span class="string">"id"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"username"</span> <span class="attr">property</span>=<span class="string">"username"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"password"</span> <span class="attr">property</span>=<span class="string">"password"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">result</span> <span class="attr">column</span>=<span class="string">"birthday"</span> <span class="attr">property</span>=<span class="string">"birthday"</span>&gt;</span><span class="tag">&lt;/<span class="name">result</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">association</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">resultMap</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <h5 id="1-1-6-测试结果"><a href="#1-1-6-测试结果" class="headerlink" title="1.1.6 测试结果"></a>1.1.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">OrderMapper mapper = sqlSession.getMapper(OrderMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">List&lt;Order&gt; all = mapper.findAll();</span><br><span class="line"><span class="keyword">for</span>(Order order : all)&#123;</span><br><span class="line">    System.out.println(order);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt></p>
 <h4 id="1-2-一对多查询"><a href="#1-2-一对多查询" class="headerlink" title="1.2 一对多查询"></a>1.2 一对多查询</h4><h5 id="1-2-1-一对多查询的模型"><a href="#1-2-1-一对多查询的模型" class="headerlink" title="1.2.1 一对多查询的模型"></a>1.2.1 一对多查询的模型</h5><p>用户表和订单表的关系为，一个用户有多个订单，一个订单只从属于一个用户</p>
 <p>一对多查询的需求：查询一个用户，与此同时查询出该用户具有的订单</p>
-<p>  <img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt=""></p>
+<p>  <img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt></p>
 <h5 id="1-2-2-一对多查询的语句"><a href="#1-2-2-一对多查询的语句" class="headerlink" title="1.2.2 一对多查询的语句"></a>1.2.2 一对多查询的语句</h5><p>对应的sql语句：select *,o.id oid from user u left join orders o on u.id=o.uid;</p>
 <p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt></p>
 <h5 id="1-2-3-修改User实体"><a href="#1-2-3-修改User实体" class="headerlink" title="1.2.3 修改User实体"></a>1.2.3 修改User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> Date ordertime;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> total;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//代表当前订单从属于哪一个客户</span></span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些订单</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Order&gt; orderList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-2-4-创建UserMapper接口"><a href="#1-2-4-创建UserMapper接口" class="headerlink" title="1.2.4 创建UserMapper接口"></a>1.2.4 创建UserMapper接口</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">UserMapper</span> </span>&#123;</span><br><span class="line">    <span class="function">List&lt;User&gt; <span class="title">findAll</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -573,14 +653,14 @@
 
 <h5 id="1-2-6-测试结果"><a href="#1-2-6-测试结果" class="headerlink" title="1.2.6 测试结果"></a>1.2.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">UserMapper mapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">List&lt;User&gt; all = mapper.findAll();</span><br><span class="line"><span class="keyword">for</span>(User user : all)&#123;</span><br><span class="line">    System.out.println(user.getUsername());</span><br><span class="line">    List&lt;Order&gt; orderList = user.getOrderList();</span><br><span class="line">    <span class="keyword">for</span>(Order order : orderList)&#123;</span><br><span class="line">        System.out.println(order);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"----------------------------------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt></p>
 <h4 id="1-3-多对多查询"><a href="#1-3-多对多查询" class="headerlink" title="1.3 多对多查询"></a>1.3 多对多查询</h4><h5 id="1-3-1-多对多查询的模型"><a href="#1-3-1-多对多查询的模型" class="headerlink" title="1.3.1 多对多查询的模型"></a>1.3.1 多对多查询的模型</h5><p>用户表和角色表的关系为，一个用户有多个角色，一个角色被多个用户使用</p>
 <p>多对多查询的需求：查询用户同时查询出该用户的所有角色</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt></p>
 <h5 id="1-3-2-多对多查询的语句"><a href="#1-3-2-多对多查询的语句" class="headerlink" title="1.3.2 多对多查询的语句"></a>1.3.2 多对多查询的语句</h5><p>对应的sql语句：select u.<em>,r.</em>,r.id rid from user u left join user_role ur on u.id=ur.user_id</p>
 <p> inner join role r on ur.role_id=r.id;</p>
 <p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt></p>
 <h5 id="1-3-3-创建Role实体，修改User实体"><a href="#1-3-3-创建Role实体，修改User实体" class="headerlink" title="1.3.3 创建Role实体，修改User实体"></a>1.3.3 创建Role实体，修改User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些订单</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Order&gt; orderList;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些角色</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Role&gt; roleList;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Role</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String rolename;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="1-3-4-添加UserMapper接口方法"><a href="#1-3-4-添加UserMapper接口方法" class="headerlink" title="1.3.4  添加UserMapper接口方法"></a>1.3.4  添加UserMapper接口方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List&lt;User&gt; <span class="title">findAllUserAndRole</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
@@ -589,11 +669,11 @@
 
 <h5 id="1-3-6-测试结果"><a href="#1-3-6-测试结果" class="headerlink" title="1.3.6 测试结果"></a>1.3.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">UserMapper mapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">List&lt;User&gt; all = mapper.findAllUserAndRole();</span><br><span class="line"><span class="keyword">for</span>(User user : all)&#123;</span><br><span class="line">    System.out.println(user.getUsername());</span><br><span class="line">    List&lt;Role&gt; roleList = user.getRoleList();</span><br><span class="line">    <span class="keyword">for</span>(Role role : roleList)&#123;</span><br><span class="line">        System.out.println(role);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"----------------------------------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%879.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%879.png" alt></p>
 <h4 id="1-4-知识小结"><a href="#1-4-知识小结" class="headerlink" title="1.4 知识小结"></a>1.4 知识小结</h4><p>MyBatis多表配置方式：</p>
-<p><strong>一对一配置：使用<resultMap>做配置</strong></p>
-<p><strong>一对多配置：使用<resultMap>+<collection>做配置</strong></p>
-<p><strong>多对多配置：使用<resultMap>+<collection>做配置</strong></p>
+<p><strong>一对一配置：使用<resultMap>做配置</resultMap></strong></p>
+<p><strong>一对多配置：使用<resultMap>+<collection>做配置</collection></resultMap></strong></p>
+<p><strong>多对多配置：使用<resultMap>+<collection>做配置</collection></resultMap></strong></p>
 <h3 id="2-Mybatis的注解开发"><a href="#2-Mybatis的注解开发" class="headerlink" title="2.Mybatis的注解开发"></a>2.Mybatis的注解开发</h3><h4 id="2-1-MyBatis的常用注解"><a href="#2-1-MyBatis的常用注解" class="headerlink" title="2.1 MyBatis的常用注解"></a>2.1 MyBatis的常用注解</h4><p>这几年来注解开发越来越流行，Mybatis也可以使用注解开发方式，这样我们就可以减少编写Mapper</p>
 <p>映射文件了。我们先围绕一些基本的CRUD来学习，再学习复杂映射多表操作。</p>
 <p>@Insert：实现新增</p>
@@ -613,17 +693,17 @@
 <p>或者指定扫描包含映射关系的接口所在的包也可以</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mappers</span>&gt;</span></span><br><span class="line">    <span class="comment">&lt;!--扫描使用注解的类所在的包--&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">package</span> <span class="attr">name</span>=<span class="string">"com.itheima.mapper"</span>&gt;</span><span class="tag">&lt;/<span class="name">package</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mappers</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
-<h4 id="2-3-MyBatis的注解实现复杂映射开发"><a href="#2-3-MyBatis的注解实现复杂映射开发" class="headerlink" title="2.3 MyBatis的注解实现复杂映射开发"></a>2.3 MyBatis的注解实现复杂映射开发</h4><p>实现复杂关系映射之前我们可以在映射文件中通过配置<resultMap>来实现，使用注解开发后，我们可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8710.png" alt=""></p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8711.png" alt=""></p>
+<h4 id="2-3-MyBatis的注解实现复杂映射开发"><a href="#2-3-MyBatis的注解实现复杂映射开发" class="headerlink" title="2.3 MyBatis的注解实现复杂映射开发"></a>2.3 MyBatis的注解实现复杂映射开发</h4><p>实现复杂关系映射之前我们可以在映射文件中通过配置<resultMap>来实现，使用注解开发后，我们可以使用@Results注解，@Result注解，@One注解，@Many注解组合完成复杂关系的配置</resultMap></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8710.png" alt></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8711.png" alt></p>
 <h4 id="2-4-一对一查询"><a href="#2-4-一对一查询" class="headerlink" title="2.4 一对一查询"></a>2.4 一对一查询</h4><h5 id="2-4-1-一对一查询的模型"><a href="#2-4-1-一对一查询的模型" class="headerlink" title="2.4.1 一对一查询的模型"></a>2.4.1 一对一查询的模型</h5><p>用户表和订单表的关系为，一个用户有多个订单，一个订单只从属于一个用户</p>
 <p>一对一查询的需求：查询一个订单，与此同时查询出该订单所属的用户</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8712.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8712.png" alt></p>
 <h5 id="2-4-2-一对一查询的语句"><a href="#2-4-2-一对一查询的语句" class="headerlink" title="2.4.2 一对一查询的语句"></a>2.4.2 一对一查询的语句</h5><p>对应的sql语句：</p>
 <pre><code>select * from orders;
 
 select * from user where id=查询出订单的uid;</code></pre><p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8713.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8713.png" alt></p>
 <h5 id="2-4-3-创建Order和User实体"><a href="#2-4-3-创建Order和User实体" class="headerlink" title="2.4.3 创建Order和User实体"></a>2.4.3 创建Order和User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> Date ordertime;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> total;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//代表当前订单从属于哪一个客户</span></span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="2-4-4-创建OrderMapper接口"><a href="#2-4-4-创建OrderMapper接口" class="headerlink" title="2.4.4 创建OrderMapper接口"></a>2.4.4 创建OrderMapper接口</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">interface</span> <span class="title">OrderMapper</span> </span>&#123;</span><br><span class="line">    <span class="function">List&lt;Order&gt; <span class="title">findAll</span><span class="params">()</span></span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -634,15 +714,15 @@ select * from user where id=查询出订单的uid;</code></pre><p>查询的结�
 
 <h5 id="2-4-6-测试结果"><a href="#2-4-6-测试结果" class="headerlink" title="2.4.6 测试结果"></a>2.4.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testSelectOrderAndUser</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    List&lt;Order&gt; all = orderMapper.findAll();</span><br><span class="line">    <span class="keyword">for</span>(Order order : all)&#123;</span><br><span class="line">        System.out.println(order);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8714.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8714.png" alt></p>
 <h4 id="2-5-一对多查询"><a href="#2-5-一对多查询" class="headerlink" title="2.5 一对多查询"></a>2.5 一对多查询</h4><h5 id="2-5-1-一对多查询的模型"><a href="#2-5-1-一对多查询的模型" class="headerlink" title="2.5.1 一对多查询的模型"></a>2.5.1 一对多查询的模型</h5><p>用户表和订单表的关系为，一个用户有多个订单，一个订单只从属于一个用户</p>
 <p>一对多查询的需求：查询一个用户，与此同时查询出该用户具有的订单</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8715.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8715.png" alt></p>
 <h5 id="2-5-2-一对多查询的语句"><a href="#2-5-2-一对多查询的语句" class="headerlink" title="2.5.2 一对多查询的语句"></a>2.5.2 一对多查询的语句</h5><p>对应的sql语句：</p>
 <pre><code>select * from user;
 
 select * from orders where uid=查询出用户的id;</code></pre><p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8716.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8716.png" alt></p>
 <h5 id="2-5-3-修改User实体"><a href="#2-5-3-修改User实体" class="headerlink" title="2.5.3 修改User实体"></a>2.5.3 修改User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Order</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> Date ordertime;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">double</span> total;</span><br><span class="line"></span><br><span class="line">    <span class="comment">//代表当前订单从属于哪一个客户</span></span><br><span class="line">    <span class="keyword">private</span> User user;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些订单</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Order&gt; orderList;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="2-5-4-创建UserMapper接口"><a href="#2-5-4-创建UserMapper接口" class="headerlink" title="2.5.4 创建UserMapper接口"></a>2.5.4 创建UserMapper接口</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List&lt;User&gt; <span class="title">findAllUserAndOrder</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
@@ -651,15 +731,15 @@ select * from orders where uid=查询出用户的id;</code></pre><p>查询的结
 
 <h5 id="2-5-6-测试结果"><a href="#2-5-6-测试结果" class="headerlink" title="2.5.6 测试结果"></a>2.5.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">List&lt;User&gt; all = userMapper.findAllUserAndOrder();</span><br><span class="line"><span class="keyword">for</span>(User user : all)&#123;</span><br><span class="line">    System.out.println(user.getUsername());</span><br><span class="line">    List&lt;Order&gt; orderList = user.getOrderList();</span><br><span class="line">    <span class="keyword">for</span>(Order order : orderList)&#123;</span><br><span class="line">        System.out.println(order);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"-----------------------------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8717.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8717.png" alt></p>
 <h4 id="2-6-多对多查询"><a href="#2-6-多对多查询" class="headerlink" title="2.6 多对多查询"></a>2.6 多对多查询</h4><h5 id="2-6-1-多对多查询的模型"><a href="#2-6-1-多对多查询的模型" class="headerlink" title="2.6.1 多对多查询的模型"></a>2.6.1 多对多查询的模型</h5><p>用户表和角色表的关系为，一个用户有多个角色，一个角色被多个用户使用</p>
 <p>多对多查询的需求：查询用户同时查询出该用户的所有角色</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8718.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8718.png" alt></p>
 <h5 id="2-6-2-多对多查询的语句"><a href="#2-6-2-多对多查询的语句" class="headerlink" title="2.6.2 多对多查询的语句"></a>2.6.2 多对多查询的语句</h5><p>对应的sql语句：</p>
 <pre><code>select * from user;
 
 select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的id</code></pre><p>查询的结果如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8719.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8719.png" alt></p>
 <h5 id="2-6-3-创建Role实体，修改User实体"><a href="#2-6-3-创建Role实体，修改User实体" class="headerlink" title="2.6.3 创建Role实体，修改User实体"></a>2.6.3 创建Role实体，修改User实体</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;</span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String username;</span><br><span class="line">    <span class="keyword">private</span> String password;</span><br><span class="line">    <span class="keyword">private</span> Date birthday;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些订单</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Order&gt; orderList;</span><br><span class="line">    <span class="comment">//代表当前用户具备哪些角色</span></span><br><span class="line">    <span class="keyword">private</span> List&lt;Role&gt; roleList;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Role</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">private</span> <span class="keyword">int</span> id;</span><br><span class="line">    <span class="keyword">private</span> String rolename;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h5 id="2-6-4-添加UserMapper接口方法"><a href="#2-6-4-添加UserMapper接口方法" class="headerlink" title="2.6.4 添加UserMapper接口方法"></a>2.6.4 添加UserMapper接口方法</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">List&lt;User&gt; <span class="title">findAllUserAndRole</span><span class="params">()</span></span>;</span><br></pre></td></tr></table></figure>
@@ -668,7 +748,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 <h5 id="2-6-6-测试结果"><a href="#2-6-6-测试结果" class="headerlink" title="2.6.6 测试结果"></a>2.6.6 测试结果</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">UserMapper mapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">List&lt;User&gt; all = mapper.findAllUserAndRole();</span><br><span class="line"><span class="keyword">for</span>(User user : all)&#123;</span><br><span class="line">    System.out.println(user.getUsername());</span><br><span class="line">    List&lt;Role&gt; roleList = user.getRoleList();</span><br><span class="line">    <span class="keyword">for</span>(Role role : roleList)&#123;</span><br><span class="line">        System.out.println(role);</span><br><span class="line">    &#125;</span><br><span class="line">    System.out.println(<span class="string">"----------------------------------"</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8720.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(11)mybatis-day03/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8720.png" alt></p>
 
       
 
@@ -755,7 +835,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p><strong>2) Mapper接口方法名和Mapper.xml中定义的每个statement的id相同</strong></p>
 <p><strong>3) Mapper接口方法的输入参数类型和mapper.xml中定义的每个sql的parameterType的类型相同</strong></p>
 <p><strong>4) Mapper接口方法的输出参数类型和mapper.xml中定义的每个sql的resultType的类型相同</strong></p>
-<h5 id="1-2-2-编写UserMapper接口"><a href="#1-2-2-编写UserMapper接口" class="headerlink" title="1.2.2 编写UserMapper接口"></a>1.2.2 编写UserMapper接口</h5><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE1.png" alt=""></p>
+<h5 id="1-2-2-编写UserMapper接口"><a href="#1-2-2-编写UserMapper接口" class="headerlink" title="1.2.2 编写UserMapper接口"></a>1.2.2 编写UserMapper接口</h5><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE1.png" alt></p>
 <h5 id="1-2-3测试代理方式"><a href="#1-2-3测试代理方式" class="headerlink" title="1.2.3测试代理方式"></a>1.2.3测试代理方式</h5><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testProxyDao</span><span class="params">()</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">    InputStream resourceAsStream = Resources.getResourceAsStream(<span class="string">"SqlMapConfig.xml"</span>);</span><br><span class="line">    SqlSessionFactory sqlSessionFactory = <span class="keyword">new</span> SqlSessionFactoryBuilder().build(resourceAsStream);</span><br><span class="line">    SqlSession sqlSession = sqlSessionFactory.openSession();</span><br><span class="line">    <span class="comment">//获得MyBatis框架生成的UserMapper接口的实现类</span></span><br><span class="line">  UserMapper userMapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">    User user = userMapper.findById(<span class="number">1</span>);</span><br><span class="line">    System.out.println(user);</span><br><span class="line">    sqlSession.close();</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="1-3-知识小结"><a href="#1-3-知识小结" class="headerlink" title="1.3 知识小结"></a>1.3 知识小结</h4><p>MyBatis的Dao层实现的两种方式：</p>
@@ -763,27 +843,27 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p><strong>代理方式对Dao进行实现：</strong></p>
 <pre><code>**UserMapper userMapper = sqlSession.getMapper(UserMapper.class);**</code></pre><h3 id="2-MyBatis映射文件深入"><a href="#2-MyBatis映射文件深入" class="headerlink" title="2.MyBatis映射文件深入"></a>2.MyBatis映射文件深入</h3><h4 id="2-1-动态sql语句"><a href="#2-1-动态sql语句" class="headerlink" title="2.1 动态sql语句"></a>2.1 动态sql语句</h4><h5 id="2-1-1动态sql语句概述"><a href="#2-1-1动态sql语句概述" class="headerlink" title="2.1.1动态sql语句概述"></a>2.1.1动态sql语句概述</h5><p>Mybatis 的映射文件中，前面我们的 SQL 都是比较简单的，有些时候业务逻辑复杂时，我们的 SQL是动态变化的，此时在前面的学习中我们的 SQL 就不能满足要求了。</p>
 <p>参考的官方文档，描述如下：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt></p>
 <h5 id="2-1-2动态-SQL-之-lt-if-gt"><a href="#2-1-2动态-SQL-之-lt-if-gt" class="headerlink" title="2.1.2动态 SQL  之&lt;if&gt;"></a>2.1.2动态 SQL  之&lt;<strong>if&gt;</strong></h5><p>我们根据实体类的不同取值，使用不同的 SQL语句来进行查询。比如在 id如果不为空时可以根据id查询，如果username 不同空时还要加入用户名作为条件。这种情况在我们的多条件组合查询中经常会碰到。</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findByCondition"</span> <span class="attr">parameterType</span>=<span class="string">"user"</span> <span class="attr">resultType</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    select * from User</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"id!=0"</span>&gt;</span></span><br><span class="line">            and id=#&#123;id&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">if</span> <span class="attr">test</span>=<span class="string">"username!=null"</span>&gt;</span></span><br><span class="line">            and username=#&#123;username&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">if</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>当查询条件id和username都存在时，控制台打印的sql语句如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">   … … …</span><br><span class="line">   <span class="comment">//获得MyBatis框架生成的UserMapper接口的实现类</span></span><br><span class="line">UserMapper userMapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">  User condition = <span class="keyword">new</span> User();</span><br><span class="line">  condition.setId(<span class="number">1</span>);</span><br><span class="line">  condition.setUsername(<span class="string">"lucy"</span>);</span><br><span class="line">  User user = userMapper.findByCondition(condition);</span><br><span class="line">  … … …</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt></p>
 <p>当查询条件只有id存在时，控制台打印的sql语句如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> … … …</span><br><span class="line"> <span class="comment">//获得MyBatis框架生成的UserMapper接口的实现类</span></span><br><span class="line">UserMapper userMapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line">User condition = <span class="keyword">new</span> User();</span><br><span class="line">condition.setId(<span class="number">1</span>);</span><br><span class="line">User user = userMapper.findByCondition(condition);</span><br><span class="line">… … …</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt></p>
 <h5 id="2-1-3-动态-SQL-之-lt-foreach-gt"><a href="#2-1-3-动态-SQL-之-lt-foreach-gt" class="headerlink" title="2.1.3 动态 SQL  之&lt;foreach&gt;"></a>2.1.3 动态 SQL  之&lt;<strong>foreach&gt;</strong></h5><p>循环执行sql的拼接操作，例如：SELECT * FROM USER WHERE id IN (1,2,5)。</p>
  <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">select</span> <span class="attr">id</span>=<span class="string">"findByIds"</span> <span class="attr">parameterType</span>=<span class="string">"list"</span> <span class="attr">resultType</span>=<span class="string">"user"</span>&gt;</span></span><br><span class="line">    select * from User</span><br><span class="line">    <span class="tag">&lt;<span class="name">where</span>&gt;</span></span><br><span class="line">        <span class="tag">&lt;<span class="name">foreach</span> <span class="attr">collection</span>=<span class="string">"array"</span> <span class="attr">open</span>=<span class="string">"id in("</span> <span class="attr">close</span>=<span class="string">")"</span> <span class="attr">item</span>=<span class="string">"id"</span> <span class="attr">separator</span>=<span class="string">","</span>&gt;</span></span><br><span class="line">            #&#123;id&#125;</span><br><span class="line">        <span class="tag">&lt;/<span class="name">foreach</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">where</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">select</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>测试代码片段如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"> … … …</span><br><span class="line"> <span class="comment">//获得MyBatis框架生成的UserMapper接口的实现类</span></span><br><span class="line">UserMapper userMapper = sqlSession.getMapper(UserMapper<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"><span class="keyword">int</span>[] ids = <span class="keyword">new</span> <span class="keyword">int</span>[]&#123;<span class="number">2</span>,<span class="number">5</span>&#125;;</span><br><span class="line">List&lt;User&gt; userList = userMapper.findByIds(ids);</span><br><span class="line">System.out.println(userList);</span><br><span class="line">… … …</span><br></pre></td></tr></table></figure>
 
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt></p>
 <p>foreach标签的属性含义如下：</p>
-<p><foreach>标签用于遍历集合，它的属性：</p>
+<p><foreach>标签用于遍历集合，它的属性：</foreach></p>
 <p>•collection：代表要遍历的集合元素，注意编写时不要写#{}</p>
 <p>•open：代表语句的开始部分</p>
 <p>•close：代表结束部分</p>
@@ -798,10 +878,10 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 
 <h3 id="3-MyBatis核心配置文件深入"><a href="#3-MyBatis核心配置文件深入" class="headerlink" title="3. MyBatis核心配置文件深入"></a>3. MyBatis核心配置文件深入</h3><h4 id="3-1typeHandlers标签"><a href="#3-1typeHandlers标签" class="headerlink" title="3.1typeHandlers标签"></a>3.1typeHandlers标签</h4><p>无论是 MyBatis 在预处理语句（PreparedStatement）中设置一个参数时，还是从结果集中取出一个值时， 都会用类型处理器将获取的值以合适的方式转换成 Java 类型。下表描述了一些默认的类型处理器（截取部分）。</p>
-<p> <img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt=""></p>
+<p> <img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt></p>
 <p>你可以重写类型处理器或创建你自己的类型处理器来处理不支持的或非标准的类型。具体做法为：实现 org.apache.ibatis.type.TypeHandler 接口， 或继承一个很便利的类 org.apache.ibatis.type.BaseTypeHandler， 然后可以选择性地将它映射到一个JDBC类型。例如需求：一个Java中的Date数据类型，我想将之存到数据库的时候存成一个1970年至今的毫秒数，取出来时转换成java的Date，即java的Date与数据库的varchar毫秒值之间转换。</p>
 <p>开发步骤：</p>
-<p>①定义转换类继承类BaseTypeHandler<T></p>
+<p>①定义转换类继承类BaseTypeHandler<T></T></p>
 <p>②覆盖4个未实现的方法，其中setNonNullParameter为java程序设置数据到数据库的回调方法，getNullableResult为查询时 mysql的字符串类型转换成 java的Type类型的方法</p>
 <p>③在MyBatis核心配置文件中进行注册</p>
 <p>测试转换是否正确</p>
@@ -815,10 +895,10 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">user.setBirthday(<span class="keyword">new</span> Date());</span><br><span class="line">userMapper.add2(user);</span><br></pre></td></tr></table></figure>
 
 <p>数据库数据：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt></p>
 <p>测试查询操作：</p>
 <p>​    </p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(10)mybatis-day02/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt></p>
 <h4 id="3-2-plugins标签"><a href="#3-2-plugins标签" class="headerlink" title="3.2 plugins标签"></a>3.2 plugins标签</h4><p>MyBatis可以使用第三方的插件来对功能进行扩展，分页助手PageHelper是将分页的复杂操作进行封装，使用简单的方式即可获得分页的相关数据</p>
 <p>开发步骤：</p>
 <p>①导入通用PageHelper的坐标</p>
@@ -839,7 +919,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>3、environments标签：数据源环境配置标签</p>
 <p>4、typeHandlers标签：配置自定义类型处理器</p>
 <p>5、plugins标签：配置MyBatis的插件</p>
-<pre><code>&quot;</code></pre><h5 id=""><a href="#" class="headerlink" title=""></a></h5>
+<pre><code>&quot;</code></pre><h5 id><a href="#" class="headerlink" title></a></h5>
       
 
       
@@ -912,8 +992,8 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h3 id="1-Mybatis简介"><a href="#1-Mybatis简介" class="headerlink" title="1.Mybatis简介"></a>1.Mybatis简介</h3><h4 id="1-1原始jdbc操作（查询数据）"><a href="#1-1原始jdbc操作（查询数据）" class="headerlink" title="1.1原始jdbc操作（查询数据）"></a>1.1原始jdbc操作（查询数据）</h4><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt=""></p>
-<h4 id="1-2原始jdbc操作（插入数据）"><a href="#1-2原始jdbc操作（插入数据）" class="headerlink" title="1.2原始jdbc操作（插入数据）"></a>1.2原始jdbc操作（插入数据）</h4><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt=""></p>
+        <h3 id="1-Mybatis简介"><a href="#1-Mybatis简介" class="headerlink" title="1.Mybatis简介"></a>1.Mybatis简介</h3><h4 id="1-1原始jdbc操作（查询数据）"><a href="#1-1原始jdbc操作（查询数据）" class="headerlink" title="1.1原始jdbc操作（查询数据）"></a>1.1原始jdbc操作（查询数据）</h4><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt></p>
+<h4 id="1-2原始jdbc操作（插入数据）"><a href="#1-2原始jdbc操作（插入数据）" class="headerlink" title="1.2原始jdbc操作（插入数据）"></a>1.2原始jdbc操作（插入数据）</h4><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt></p>
 <h4 id="1-3-原始jdbc操作的分析"><a href="#1-3-原始jdbc操作的分析" class="headerlink" title="1.3 原始jdbc操作的分析"></a>1.3 原始jdbc操作的分析</h4><p>原始jdbc开发存在的问题如下：</p>
 <p>①数据库连接创建、释放频繁造成系统资源浪费从而影响系统性能</p>
 <p>②sql 语句在代码中硬编码，造成代码不易维护，实际应用 sql 变化的可能较大，sql 变动需要改变java代码。</p>
@@ -926,7 +1006,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>mybatis通过xml或注解的方式将要执行的各种 statement配置起来，并通过java对象和statement中sql的动态参数进行映射生成最终执行的sql语句。</p>
 <p>最后mybatis框架执行sql并将结果映射为java对象并返回。采用ORM思想解决了实体和数据库映射的问题，对jdbc 进行了封装，屏蔽了jdbc api 底层访问细节，使我们不用与jdbc api 打交道，就可以完成对数据库的持久化操作。</p>
 <h3 id="2-Mybatis的快速入门"><a href="#2-Mybatis的快速入门" class="headerlink" title="2.Mybatis的快速入门"></a>2.Mybatis的快速入门</h3><h4 id="2-1-MyBatis开发步骤"><a href="#2-1-MyBatis开发步骤" class="headerlink" title="2.1 MyBatis开发步骤"></a>2.1 MyBatis开发步骤</h4><p>MyBatis官网地址：<a href="http://www.mybatis.org/mybatis-3/" target="_blank" rel="noopener">http://www.mybatis.org/mybatis-3/</a> </p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt></p>
 <p><strong>MyBatis开发步骤：</strong></p>
 <p>①添加MyBatis的坐标</p>
 <p>②创建user数据表</p>
@@ -938,7 +1018,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">&lt;!--mybatis坐标--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>org.mybatis<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mybatis<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>3.4.5<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--mysql驱动坐标--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>mysql<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>   </span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>mysql-connector-java<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>5.1.6<span class="tag">&lt;/<span class="name">version</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>runtime<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--单元测试坐标--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>junit<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>4.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">scope</span>&gt;</span>test<span class="tag">&lt;/<span class="name">scope</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line"><span class="comment">&lt;!--日志坐标--&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>log4j<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span>    </span><br><span class="line">    <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.2.12<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>2)  创建user数据表</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%875.png" alt></p>
 <p>3) 编写User实体</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">User</span> </span>&#123;    </span><br><span class="line">	<span class="keyword">private</span> <span class="keyword">int</span> id;    </span><br><span class="line">	<span class="keyword">private</span> String username;    </span><br><span class="line">	<span class="keyword">private</span> String password;</span><br><span class="line">    <span class="comment">//省略get个set方法</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
@@ -957,7 +1037,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>④编写映射文件UserMapper.xml</p>
 <p>⑤编写核心文件SqlMapConfig.xml</p>
 <p>⑥编写测试类</p>
-<h3 id="3-MyBatis的映射文件概述"><a href="#3-MyBatis的映射文件概述" class="headerlink" title="3. MyBatis的映射文件概述"></a>3. MyBatis的映射文件概述</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt=""></p>
+<h3 id="3-MyBatis的映射文件概述"><a href="#3-MyBatis的映射文件概述" class="headerlink" title="3. MyBatis的映射文件概述"></a>3. MyBatis的映射文件概述</h3><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%876.png" alt></p>
 <h3 id="4-MyBatis的增删改查操作"><a href="#4-MyBatis的增删改查操作" class="headerlink" title="4. MyBatis的增删改查操作"></a>4. MyBatis的增删改查操作</h3><h4 id="4-1-MyBatis的插入数据操作"><a href="#4-1-MyBatis的插入数据操作" class="headerlink" title="4.1 MyBatis的插入数据操作"></a>4.1 MyBatis的插入数据操作</h4><p><strong>1)编写UserMapper映射文件</strong></p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">namespace</span>=<span class="string">"userMapper"</span>&gt;</span>    </span><br><span class="line">	<span class="tag">&lt;<span class="name">insert</span> <span class="attr">id</span>=<span class="string">"add"</span> <span class="attr">parameterType</span>=<span class="string">"com.itheima.domain.User"</span>&gt;</span>        </span><br><span class="line">		insert into user values(#&#123;id&#125;,#&#123;username&#125;,#&#123;password&#125;)    </span><br><span class="line">	<span class="tag">&lt;/<span class="name">insert</span>&gt;</span></span><br><span class="line"><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -991,10 +1071,10 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>•删除操作使用的API是sqlSession.delete(“命名空间.id”,Object);</p>
 <h4 id="4-4-知识小结"><a href="#4-4-知识小结" class="headerlink" title="4.4 知识小结"></a>4.4 知识小结</h4><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line">增删改查映射配置与API：</span><br><span class="line">查询数据： List&lt;User&gt; userList = sqlSession.selectList(<span class="string">"userMapper.findAll"</span>);</span><br><span class="line">    &lt;select id=<span class="string">"findAll"</span> resultType=<span class="string">"com.itheima.domain.User"</span>&gt;</span><br><span class="line">        select * from User</span><br><span class="line">    &lt;/select&gt;</span><br><span class="line">添加数据： sqlSession.insert(<span class="string">"userMapper.add"</span>, user);</span><br><span class="line">    &lt;insert id=<span class="string">"add"</span> parameterType=<span class="string">"com.itheima.domain.User"</span>&gt;</span><br><span class="line">        <span class="function">insert into user <span class="title">values</span><span class="params">(#&#123;id&#125;,#&#123;username&#125;,#&#123;password&#125;)</span></span></span><br><span class="line"><span class="function">    &lt;/insert&gt;</span></span><br><span class="line"><span class="function">修改数据： sqlSession.<span class="title">update</span><span class="params">(<span class="string">"userMapper.update"</span>, user)</span></span>;</span><br><span class="line">    &lt;update id=<span class="string">"update"</span> parameterType=<span class="string">"com.itheima.domain.User"</span>&gt;</span><br><span class="line">        update user set username=#&#123;username&#125;,password=#&#123;password&#125; where id=#&#123;id&#125;</span><br><span class="line">    &lt;/update&gt;</span><br><span class="line">删除数据：sqlSession.delete(<span class="string">"userMapper.delete"</span>,<span class="number">3</span>);</span><br><span class="line">    &lt;delete id=<span class="string">"delete"</span> parameterType=<span class="string">"java.lang.Integer"</span>&gt;</span><br><span class="line">        delete from user where id=#&#123;id&#125;</span><br><span class="line">    &lt;/delete&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="5-MyBatis核心配置文件概述"><a href="#5-MyBatis核心配置文件概述" class="headerlink" title="5. MyBatis核心配置文件概述"></a>5. MyBatis核心配置文件概述</h3><h4 id="5-1-MyBatis核心配置文件层级关系"><a href="#5-1-MyBatis核心配置文件层级关系" class="headerlink" title="5.1 MyBatis核心配置文件层级关系"></a>5.1 MyBatis核心配置文件层级关系</h4><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt=""></p>
+<h3 id="5-MyBatis核心配置文件概述"><a href="#5-MyBatis核心配置文件概述" class="headerlink" title="5. MyBatis核心配置文件概述"></a>5. MyBatis核心配置文件概述</h3><h4 id="5-1-MyBatis核心配置文件层级关系"><a href="#5-1-MyBatis核心配置文件层级关系" class="headerlink" title="5.1 MyBatis核心配置文件层级关系"></a>5.1 MyBatis核心配置文件层级关系</h4><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%877.png" alt></p>
 <h4 id="5-2-MyBatis常用配置解析"><a href="#5-2-MyBatis常用配置解析" class="headerlink" title="5.2 MyBatis常用配置解析"></a>5.2 MyBatis常用配置解析</h4><p><strong>1)environments标签</strong></p>
 <p>数据库环境的配置，支持多环境配置</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%878.png" alt></p>
 <p>其中，事务管理器（transactionManager）类型有两种：</p>
 <p>•JDBC：这个配置就是直接使用了JDBC 的提交和回滚设置，它依赖于从数据源得到的连接来管理事务作用域。</p>
 <p>•MANAGED：这个配置几乎没做什么。它从来不提交或回滚一个连接，而是让容器来管理事务的整个生命周期（比如 JEE 应用服务器的上下文）。 默认情况下它会关闭连接，然而一些容器并不希望这样，因此需要将 closeConnection 属性设置为 false 来阻止它默认的关闭行为。</p>
@@ -1005,27 +1085,27 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p><strong>2)mapper标签</strong></p>
 <p>该标签的作用是加载映射的，加载方式有如下几种：</p>
 <p>•使用相对于类路径的资源引用，例如：</p>
-<mapper resource="org/mybatis/builder/AuthorMapper.xml"/>
+<mapper resource="org/mybatis/builder/AuthorMapper.xml">
 
 <p>•使用完全限定资源定位符（URL），例如：</p>
-<mapper url="file:///var/mappers/AuthorMapper.xml"/>
+<mapper url="file:///var/mappers/AuthorMapper.xml">
 
 <p>•使用映射器接口实现类的完全限定类名，例如：</p>
-<mapper class="org.mybatis.builder.AuthorMapper"/>
+<mapper class="org.mybatis.builder.AuthorMapper">
 
 <p>•将包内的映射器接口实现全部注册为映射器，例如：</p>
-<package name="org.mybatis.builder"/>
+<package name="org.mybatis.builder">
 
 <p><strong>3)Properties标签</strong></p>
 <p>实际开发中，习惯将数据源的配置信息单独抽取成一个properties文件，该标签可以加载额外配置的properties文件</p>
-<p>  <img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%879.png" alt=""></p>
+<p>  <img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%879.png" alt></p>
 <p><strong>4)typeAliases标签</strong></p>
 <p>类型别名是为Java 类型设置一个短的名字。原来的类型名称配置如下</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8710.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8710.png" alt></p>
 <p>配置typeAliases，为com.itheima.domain.User定义别名为user</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8711.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8711.png" alt></p>
 <p>上面我们是自定义的别名，mybatis框架已经为我们设置好的一些常用的类型的别名</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8712.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8712.png" alt></p>
 <h4 id="5-3-知识小结"><a href="#5-3-知识小结" class="headerlink" title="5.3 知识小结"></a>5.3 知识小结</h4><p><strong>核心配置文件常用配置：</strong></p>
 <p>properties标签：该标签可以加载外部的properties文件</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">properties</span> <span class="attr">resource</span>=<span class="string">"jdbc.properties"</span>&gt;</span><span class="tag">&lt;/<span class="name">properties</span>&gt;</span></span><br></pre></td></tr></table></figure>
@@ -1037,14 +1117,14 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">mapper</span> <span class="attr">resource</span>=<span class="string">"com/itheima/mapper/UserMapping.xml"</span>&gt;</span><span class="tag">&lt;/<span class="name">mapper</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
 <p>environments标签：数据源环境配置标签</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8713.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8713.png" alt></p>
 <h3 id="6-MyBatis相应API"><a href="#6-MyBatis相应API" class="headerlink" title="6.MyBatis相应API"></a>6.MyBatis相应API</h3><h4 id="6-1-SqlSession工厂构建器SqlSessionFactoryBuilder"><a href="#6-1-SqlSession工厂构建器SqlSessionFactoryBuilder" class="headerlink" title="6.1 SqlSession工厂构建器SqlSessionFactoryBuilder"></a>6.1 SqlSession工厂构建器SqlSessionFactoryBuilder</h4><p>常用API：SqlSessionFactory  build(InputStream inputStream)</p>
 <p>通过加载mybatis的核心文件的输入流的形式构建一个SqlSessionFactory对象</p>
  <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">String resource = <span class="string">"org/mybatis/builder/mybatis-config.xml"</span>; </span><br><span class="line">InputStream inputStream = Resources.getResourceAsStream(resource); </span><br><span class="line">SqlSessionFactoryBuilder builder = <span class="keyword">new</span> SqlSessionFactoryBuilder(); </span><br><span class="line">SqlSessionFactory factory = builder.build(inputStream);</span><br></pre></td></tr></table></figure>
 
 <p>其中， Resources 工具类，这个类在 org.apache.ibatis.io 包中。Resources 类帮助你从类路径下、文件系统或一个 web URL 中加载资源文件。</p>
 <h4 id="6-2-SqlSession工厂对象SqlSessionFactory"><a href="#6-2-SqlSession工厂对象SqlSessionFactory" class="headerlink" title="6.2 SqlSession工厂对象SqlSessionFactory"></a>6.2 SqlSession工厂对象SqlSessionFactory</h4><p>SqlSessionFactory 有多个个方法创建SqlSession 实例。常用的有如下两个：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8714.png" alt="1552653723002"></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(09)mybatis-day01/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%8714.png" alt="1552653723002"></p>
 <h4 id="6-3-SqlSession会话对象"><a href="#6-3-SqlSession会话对象" class="headerlink" title="6.3 SqlSession会话对象"></a>6.3 SqlSession会话对象</h4><p>SqlSession 实例在 MyBatis 中是非常强大的一个类。在这里你会看到所有执行语句、提交或回滚事务和获取映射器实例的方法。</p>
 <p>执行语句的方法主要有：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;T&gt; <span class="function">T <span class="title">selectOne</span><span class="params">(String statement, Object parameter)</span> </span></span><br><span class="line"><span class="function">&lt;E&gt; List&lt;E&gt; <span class="title">selectList</span><span class="params">(String statement, Object parameter)</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">insert</span><span class="params">(String statement, Object parameter)</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">update</span><span class="params">(String statement, Object parameter)</span> </span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">delete</span><span class="params">(String statement, Object parameter)</span></span></span><br></pre></td></tr></table></figure>
@@ -1057,7 +1137,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 
 <p>​    </p>
-<h4 id=""><a href="#" class="headerlink" title=""></a></h4>
+<h4 id><a href="#" class="headerlink" title></a></h4></package></mapper></mapper></mapper>
       
 
       
@@ -1136,7 +1216,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>表单的enctype属性是多部分表单形式，及enctype=“multipart/form-data”</p>
 <figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&lt;form action=<span class="string">"$&#123;pageContext.request.contextPath&#125;/user/quick22"</span> method=<span class="string">"post"</span> enctype=<span class="string">"multipart/form-data"</span>&gt;</span><br><span class="line">        名称&lt;input type=<span class="string">"text"</span> name=<span class="string">"username"</span>&gt;&lt;br/&gt;</span><br><span class="line">        文件<span class="number">1</span>&lt;input type=<span class="string">"file"</span> name=<span class="string">"uploadFile"</span>&gt;&lt;br/&gt;</span><br><span class="line">        &lt;input type=<span class="string">"submit"</span> value=<span class="string">"提交"</span>&gt;</span><br><span class="line">    &lt;/form&gt;</span><br></pre></td></tr></table></figure>
 
-<h3 id="2-SpringMVC的请求-文件上传-文件上传的原理-理解"><a href="#2-SpringMVC的请求-文件上传-文件上传的原理-理解" class="headerlink" title="2-SpringMVC的请求-文件上传-文件上传的原理(理解)"></a>2-SpringMVC的请求-文件上传-文件上传的原理(理解)</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/5.jpg" alt=""></p>
+<h3 id="2-SpringMVC的请求-文件上传-文件上传的原理-理解"><a href="#2-SpringMVC的请求-文件上传-文件上传的原理-理解" class="headerlink" title="2-SpringMVC的请求-文件上传-文件上传的原理(理解)"></a>2-SpringMVC的请求-文件上传-文件上传的原理(理解)</h3><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/5.jpg" alt></p>
 <h3 id="3-SpringMVC的请求-文件上传-单文件上传的代码实现1-应用"><a href="#3-SpringMVC的请求-文件上传-单文件上传的代码实现1-应用" class="headerlink" title="3-SpringMVC的请求-文件上传-单文件上传的代码实现1(应用)"></a>3-SpringMVC的请求-文件上传-单文件上传的代码实现1(应用)</h3><p>添加依赖</p>
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-fileupload<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>1.3.1<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;<span class="name">dependency</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">groupId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">groupId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">artifactId</span>&gt;</span>commons-io<span class="tag">&lt;/<span class="name">artifactId</span>&gt;</span></span><br><span class="line">      <span class="tag">&lt;<span class="name">version</span>&gt;</span>2.3<span class="tag">&lt;/<span class="name">version</span>&gt;</span></span><br><span class="line">    <span class="tag">&lt;/<span class="name">dependency</span>&gt;</span></span><br></pre></td></tr></table></figure>
 
@@ -1156,11 +1236,11 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/quick23"</span>)</span><br><span class="line">    <span class="meta">@ResponseBody</span></span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">save23</span><span class="params">(String username, MultipartFile[] uploadFile)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        System.out.println(username);</span><br><span class="line">        <span class="keyword">for</span> (MultipartFile multipartFile : uploadFile) &#123;</span><br><span class="line">            String originalFilename = multipartFile.getOriginalFilename();</span><br><span class="line">            multipartFile.transferTo(<span class="keyword">new</span> File(<span class="string">"C:\\upload\\"</span>+originalFilename));</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
-<h3 id="6-SpringMVC的请求-知识要点-理解，记忆"><a href="#6-SpringMVC的请求-知识要点-理解，记忆" class="headerlink" title="6-SpringMVC的请求-知识要点(理解，记忆)"></a>6-SpringMVC的请求-知识要点(理解，记忆)</h3><p><img src=".//img/6.jpg" alt=""></p>
+<h3 id="6-SpringMVC的请求-知识要点-理解，记忆"><a href="#6-SpringMVC的请求-知识要点-理解，记忆" class="headerlink" title="6-SpringMVC的请求-知识要点(理解，记忆)"></a>6-SpringMVC的请求-知识要点(理解，记忆)</h3><p><img src=".//img/6.jpg" alt></p>
 <h1 id="SpringMVC的拦截器"><a href="#SpringMVC的拦截器" class="headerlink" title="SpringMVC的拦截器"></a>SpringMVC的拦截器</h1><h2 id="01-SpringMVC拦截器-拦截器的作用-理解"><a href="#01-SpringMVC拦截器-拦截器的作用-理解" class="headerlink" title="01-SpringMVC拦截器-拦截器的作用(理解)"></a>01-SpringMVC拦截器-拦截器的作用(理解)</h2><p>Spring MVC 的拦截器类似于 Servlet  开发中的过滤器 Filter，用于对处理器进行预处理和后处理。</p>
 <p>将拦截器按一定的顺序联结成一条链，这条链称为拦截器链（InterceptorChain）。在访问被拦截的方法或字段时，拦截器链中的拦截器就会按其之前定义的顺序被调用。拦截器也是AOP思想的具体实现。</p>
 <h2 id="02-SpringMVC拦截器-interceptor和filter区别-理解，记忆"><a href="#02-SpringMVC拦截器-interceptor和filter区别-理解，记忆" class="headerlink" title="02-SpringMVC拦截器-interceptor和filter区别(理解，记忆)"></a>02-SpringMVC拦截器-interceptor和filter区别(理解，记忆)</h2><p>关于interceptor和filter的区别，如图所示：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/1.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/1.png" alt></p>
 <h2 id="03-SpringMVC拦截器-快速入门-应用"><a href="#03-SpringMVC拦截器-快速入门-应用" class="headerlink" title="03-SpringMVC拦截器-快速入门(应用)"></a>03-SpringMVC拦截器-快速入门(应用)</h2><p>自定义拦截器很简单，只有如下三步：</p>
 <p>①创建拦截器类实现HandlerInterceptor接口</p>
 <p>②配置拦截器</p>
@@ -1192,10 +1272,10 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>多个拦截器情况下，配置在前的先执行，配置在后的后执行</p>
 <p>拦截器中的方法执行顺序是：preHandler——-目标资源—-postHandle—- afterCompletion</p>
 <h2 id="05-SpringMVC拦截器-知识小结-记忆"><a href="#05-SpringMVC拦截器-知识小结-记忆" class="headerlink" title="05-SpringMVC拦截器-知识小结(记忆)"></a>05-SpringMVC拦截器-知识小结(记忆)</h2><p>拦截器中的方法说明如下</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/2.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/2.png" alt></p>
 <h2 id="06-SpringMVC拦截器-用户登录权限控制分析-理解"><a href="#06-SpringMVC拦截器-用户登录权限控制分析-理解" class="headerlink" title="06-SpringMVC拦截器-用户登录权限控制分析(理解)"></a>06-SpringMVC拦截器-用户登录权限控制分析(理解)</h2><p>在day06-Spring练习案例的基础之上：用户没有登录的情况下，不能对后台菜单进行访问操作，点击菜单跳转到登录页面，只有用户登录成功后才能进行后台功能的操作</p>
 <p>需求图：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/3.jpg" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/3.jpg" alt></p>
 <h2 id="07-SpringMVC拦截器-用户登录权限控制代码实现1-应用"><a href="#07-SpringMVC拦截器-用户登录权限控制代码实现1-应用" class="headerlink" title="07-SpringMVC拦截器-用户登录权限控制代码实现1(应用)"></a>07-SpringMVC拦截器-用户登录权限控制代码实现1(应用)</h2><p>判断用户是否登录  本质：判断session中有没有user，如果没有登陆则先去登陆，如果已经登陆则直接放行访问目标资源</p>
 <p>先编写拦截器如下：</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">PrivilegeInterceptor</span> <span class="keyword">implements</span> <span class="title">HandlerInterceptor</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">preHandle</span><span class="params">(HttpServletRequest request, HttpServletResponse response, Object handler)</span> <span class="keyword">throws</span> IOException </span>&#123;</span><br><span class="line">        <span class="comment">//逻辑：判断用户是否登录  本质：判断session中有没有user</span></span><br><span class="line">        HttpSession session = request.getSession();</span><br><span class="line">        User user = (User) session.getAttribute(<span class="string">"user"</span>);</span><br><span class="line">        <span class="keyword">if</span>(user==<span class="keyword">null</span>)&#123;</span><br><span class="line">            <span class="comment">//没有登录</span></span><br><span class="line">            response.sendRedirect(request.getContextPath()+<span class="string">"/login.jsp"</span>);</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="comment">//放行  访问目标资源</span></span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
@@ -1227,7 +1307,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 <h2 id="1-SpringMVC异常处理机制"><a href="#1-SpringMVC异常处理机制" class="headerlink" title="1. SpringMVC异常处理机制"></a>1. SpringMVC异常处理机制</h2><h3 id="1-1-异常处理的思路"><a href="#1-1-异常处理的思路" class="headerlink" title="1.1 异常处理的思路"></a>1.1 异常处理的思路</h3><p>系统中异常包括两类：预期异常和运行时异常RuntimeException，前者通过捕获异常从而获取异常信息，后者主要通过规范代码开发、测试等手段减少运行时异常的发生。</p>
 <p>系统的Dao、Service、Controller出现都通过throws Exception向上抛出，最后由SpringMVC前端控制器交由异常处理器进行异常处理，如下图：</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.jpg" alt="1551078013501"></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(07)springmvc-day03/03-SpringMVC%E7%9A%84%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E3%80%81%E6%8B%A6%E6%88%AA%E5%99%A8%E5%8F%8A%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.jpg" alt="1551078013501"></p>
 <h3 id="1-2-异常处理两种方式"><a href="#1-2-异常处理两种方式" class="headerlink" title="1.2 异常处理两种方式"></a>1.2 异常处理两种方式</h3><p>① 使用Spring MVC提供的简单异常处理器SimpleMappingExceptionResolver</p>
 <p>② 实现Spring的异常处理接口HandlerExceptionResolver 自定义自己的异常处理器</p>
 <h3 id="1-3-简单异常处理器SimpleMappingExceptionResolver"><a href="#1-3-简单异常处理器SimpleMappingExceptionResolver" class="headerlink" title="1.3 简单异常处理器SimpleMappingExceptionResolver"></a>1.3 简单异常处理器SimpleMappingExceptionResolver</h3><p>SpringMVC已经定义好了该类型转换器，在使用时可以根据项目情况进行相应异常与视图的映射配置</p>
@@ -1255,7 +1335,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 ③编写异常页面
 
-④测试异常跳转</code></pre><h3 id=""><a href="#" class="headerlink" title=""></a></h3>
+④测试异常跳转</code></pre><h3 id><a href="#" class="headerlink" title></a></h3>
       
 
       
@@ -1334,7 +1414,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>2） 回写数据 </p>
 <p>直接返回字符串</p>
 <p>返回对象或集合    </p>
-<h3 id="02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）"><a href="#02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）" class="headerlink" title="02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）"></a>02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(06)springmvc-day02/02-SpringMVC%E7%9A%84%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94/%E7%AC%94%E8%AE%B0/img/1.jpg" alt=""></p>
+<h3 id="02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）"><a href="#02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）" class="headerlink" title="02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）"></a>02-SpringMVC的数据响应-页面跳转-返回字符串形式（应用）</h3><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(06)springmvc-day02/02-SpringMVC%E7%9A%84%E8%AF%B7%E6%B1%82%E5%92%8C%E5%93%8D%E5%BA%94/%E7%AC%94%E8%AE%B0/img/1.jpg" alt></p>
 <h3 id="03-SpringMVC的数据响应-页面跳转-返回ModelAndView形式1-应用"><a href="#03-SpringMVC的数据响应-页面跳转-返回ModelAndView形式1-应用" class="headerlink" title="03-SpringMVC的数据响应-页面跳转-返回ModelAndView形式1(应用)"></a>03-SpringMVC的数据响应-页面跳转-返回ModelAndView形式1(应用)</h3><p>在Controller中方法返回ModelAndView对象，并且设置视图名称</p>
 <figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RequestMapping</span>(value=<span class="string">"/quick2"</span>)</span><br><span class="line">    <span class="function"><span class="keyword">public</span> ModelAndView <span class="title">save2</span><span class="params">()</span></span>&#123;</span><br><span class="line">        <span class="comment">/*</span></span><br><span class="line"><span class="comment">            Model:模型 作用封装数据</span></span><br><span class="line"><span class="comment">            View：视图 作用展示数据</span></span><br><span class="line"><span class="comment">         */</span></span><br><span class="line">        ModelAndView modelAndView = <span class="keyword">new</span> ModelAndView();</span><br><span class="line">        <span class="comment">//设置模型数据</span></span><br><span class="line">        modelAndView.addObject(<span class="string">"username"</span>,<span class="string">"itcast"</span>);</span><br><span class="line">        <span class="comment">//设置视图名称</span></span><br><span class="line">        modelAndView.setViewName(<span class="string">"success"</span>);</span><br><span class="line"></span><br><span class="line">        <span class="keyword">return</span> modelAndView;</span><br><span class="line">    &#125;</span><br></pre></td></tr></table></figure>
 
@@ -1603,10 +1683,10 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">http://localhost:8080/itheima_springmvc1/quick</span><br></pre></td></tr></table></figure>
 
 <p>控制台打印</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt=""></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%871.png" alt></p>
 <p>页面显示</p>
-<p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt="1550741609792"></p>
-<h3 id="2-3-SpringMVC流程图示"><a href="#2-3-SpringMVC流程图示" class="headerlink" title="2.3 SpringMVC流程图示"></a>2.3 SpringMVC流程图示</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt="1550741658405"></p>
+<p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%872.png" alt="1550741609792"></p>
+<h3 id="2-3-SpringMVC流程图示"><a href="#2-3-SpringMVC流程图示" class="headerlink" title="2.3 SpringMVC流程图示"></a>2.3 SpringMVC流程图示</h3><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%873.png" alt="1550741658405"></p>
 <h3 id="2-4-知识要点"><a href="#2-4-知识要点" class="headerlink" title="2.4 知识要点"></a>2.4 知识要点</h3><p>SpringMVC的开发步骤 </p>
 <p>   ①导入SpringMVC相关坐标</p>
 <p>   ②配置SpringMVC核心控制器DispathcerServlet</p>
@@ -1614,7 +1694,7 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 <p>   ④使用注解配置Controller类中业务方法的映射地址</p>
 <p>   ⑤配置SpringMVC核心文件 spring-mvc.xml</p>
 <p>   ⑥客户端发起请求测试</p>
-<h2 id="3-SpringMVC的组件解析"><a href="#3-SpringMVC的组件解析" class="headerlink" title="3. SpringMVC的组件解析"></a>3. SpringMVC的组件解析</h2><h3 id="3-1-SpringMVC的执行流程"><a href="#3-1-SpringMVC的执行流程" class="headerlink" title="3.1 SpringMVC的执行流程"></a>3.1 SpringMVC的执行流程</h3><p><img src="/Users/philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt="1550741934406"></p>
+<h2 id="3-SpringMVC的组件解析"><a href="#3-SpringMVC的组件解析" class="headerlink" title="3. SpringMVC的组件解析"></a>3. SpringMVC的组件解析</h2><h3 id="3-1-SpringMVC的执行流程"><a href="#3-1-SpringMVC的执行流程" class="headerlink" title="3.1 SpringMVC的执行流程"></a>3.1 SpringMVC的执行流程</h3><p><img src="/.com//philj/Desktop/2019_JavaEE(itheima)/Java%E8%AF%BE%E4%BB%B6/3.%E9%98%B6%E6%AE%B5%E4%B8%89-%E4%B8%BB%E6%B5%81%E6%A1%86%E6%9E%B6/(05)springmvc-day01/01-springmvc%E5%BF%AB%E9%80%9F%E5%85%A5%E9%97%A8%E3%80%81%E7%BB%84%E4%BB%B6%E8%A7%A3%E6%9E%90/%E7%AC%94%E8%AE%B0/img/%E5%9B%BE%E7%89%874.png" alt="1550741934406"></p>
 <p>①用户发送请求至前端控制器DispatcherServlet。</p>
 <p>②DispatcherServlet收到请求调用HandlerMapping处理器映射器。</p>
 <p>③处理器映射器找到具体的处理器(可以根据xml配置、注解进行查找)，生成处理器对象及处理器拦截器(如果有则生成)一并返回给DispatcherServlet。</p>
@@ -2029,118 +2109,6 @@ select * from role r,user_role ur where r.id=ur.role_id and ur.user_id=用户的
 
 
   
-    <article id="post-2018-03-26-Spring-技术总结4JdbcTemplate" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2018/03/26/2018-03-26-Spring-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%934JdbcTemplate/">Spring 技术总结4:JdbcTemplate</a>
-    </h1>
-  
-
-        
-        <a href="/2018/03/26/2018-03-26-Spring-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%934JdbcTemplate/" class="archive-article-date">
-  	<time datetime="2018-03-25T17:45:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2018-03-26</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p><strong>1.JdbcTemplate概述</strong></p>
-<p>它是spring框架中提供的一个对象，是对原始繁琐的Jdbc API对象的简单封装。spring框架为我们提供了很多的操作模板类。</p>
-<p>例如：操作关系型数据的JdbcTemplate和HibernateTemplate，操作nosql数据库的RedisTemplate，操作消息队列的JmsTemplate等等。</p>
-<p><strong>2.JDBCTemplate开发步骤</strong></p>
-<ul>
-<li>导入spring-jdbc和spring-tx坐标</li>
-<li>创建数据库表和实体 </li>
-<li>创建JdbcTemplate对象 </li>
-<li>执行数据库操作</li>
-</ul>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//测试JdbcTemplate开发步骤</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test1</span><span class="params">()</span> <span class="keyword">throws</span> PropertyVetoException </span>&#123;</span><br><span class="line"></span><br><span class="line">  </span><br><span class="line"></span><br><span class="line">   <span class="comment">//创建数据源对象</span></span><br><span class="line"></span><br><span class="line">  ComboPooledDataSource dataSource = <span class="keyword">new</span> ComboPooledDataSource();</span><br><span class="line"></span><br><span class="line">  dataSource.setDriverClass(<span class="string">"com.mysql.jdbc.Driver"</span>);</span><br><span class="line"></span><br><span class="line">  dataSource.setJdbcUrl(<span class="string">"jdbc:mysql://localhost:3306/test"</span>);</span><br><span class="line"></span><br><span class="line">  dataSource.setUser(<span class="string">"root"</span>);</span><br><span class="line"></span><br><span class="line">  dataSource.setPassword(<span class="string">"root"</span>);</span><br><span class="line"></span><br><span class="line">  JdbcTemplate jdbcTemplate = <span class="keyword">new</span> JdbcTemplate();</span><br><span class="line"></span><br><span class="line">  <span class="comment">//设置数据源对象 知道数据库在哪</span></span><br><span class="line"></span><br><span class="line">  jdbcTemplate.setDataSource(dataSource);</span><br><span class="line"></span><br><span class="line">  <span class="comment">//执行操作</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> row = jdbcTemplate.update(<span class="string">"insert into account values(?,?)"</span>, <span class="string">"tom"</span>, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">  System.out.println(row);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>3.Spring产生JdbcTemplate对象</strong></p>
-<p>我们可以将JdbcTemplate的创建权交给Spring，将数据源DataSource的创建权也交给Spring，</p>
-<p>在Spring容器内部将数据源DataSource注入到JdbcTemplate模版对象中，配置如下：</p>
-<figure class="highlight properties"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line"><span class="attr">&lt;!--加载jdbc.properties--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;context</span>:<span class="string">property-placeholder location="classpath:jdbc.properties"/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&lt;!--数据源对象--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;bean</span> <span class="string">id="dataSource" class="com.mchange.v2.c3p0.ComboPooledDataSource"&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">&lt;property</span> <span class="string">name="driverClass" value="$&#123;jdbc.driver&#125;"/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">&lt;property</span> <span class="string">name="jdbcUrl" value="$&#123;jdbc.url&#125;"/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">&lt;property</span> <span class="string">name="user" value="$&#123;jdbc.username&#125;"/&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">&lt;property</span> <span class="string">name="password" value="$&#123;jdbc.password&#125;"/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&lt;/bean&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&lt;!--jdbc模板对象--&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="meta">&lt;bean</span> <span class="string">id="jdbcTemplate" class="org.springframework.jdbc.core.JdbcTemplate"&gt;</span></span><br><span class="line"></span><br><span class="line">  <span class="meta">&lt;property</span> <span class="string">name="dataSource" ref="dataSource"/&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="attr">&lt;/bean&gt;</span></span><br></pre></td></tr></table></figure>
-
-<p>从容器中获得JdbcTemplate进行添加操作</p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//测试Spring产生jdbcTemplate对象</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">test2</span><span class="params">()</span> <span class="keyword">throws</span> PropertyVetoException </span>&#123;</span><br><span class="line"></span><br><span class="line">  ApplicationContext app = <span class="keyword">new</span> ClassPathXmlApplicationContext(<span class="string">"applicationContext.xml"</span>);</span><br><span class="line"></span><br><span class="line">  JdbcTemplate jdbcTemplate = app.getBean(JdbcTemplate<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">int</span> row = jdbcTemplate.update(<span class="string">"insert into account values(?,?)"</span>, <span class="string">"lisi"</span>, <span class="number">5000</span>);</span><br><span class="line"></span><br><span class="line">  System.out.println(row);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-
-
-
-
-<p><strong>4.JdbcTemplate的常用操作</strong></p>
-<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">@RunWith</span>(SpringJUnit4ClassRunner<span class="class">.<span class="keyword">class</span>)</span></span><br><span class="line"><span class="class"></span></span><br><span class="line">@ContextConfiguration("classpath:applicationContext.xml")</span><br><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">JdbcTemplateCRUDTest</span> </span>&#123;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Autowired</span></span><br><span class="line"></span><br><span class="line">  <span class="keyword">private</span> JdbcTemplate jdbcTemplate;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryCount</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    Long count = jdbcTemplate.queryForObject(<span class="string">"select count(*) from account"</span>, Long<span class="class">.<span class="keyword">class</span>)</span>;</span><br><span class="line"></span><br><span class="line">​    System.out.println(count);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryOne</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    Account account = jdbcTemplate.queryForObject("select * from account where name=?", new BeanPropertyRowMapper&lt;Account&gt;(Account.class), "tom");</span><br><span class="line"></span><br><span class="line">​    System.out.println(account);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testQueryAll</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    List&lt;Account&gt; accountList = jdbcTemplate.query(<span class="string">"select * from account"</span>, <span class="keyword">new</span> BeanPropertyRowMapper&lt;Account&gt;(Account<span class="class">.<span class="keyword">class</span>))</span>;</span><br><span class="line"></span><br><span class="line">​    System.out.println(accountList);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testUpdate</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    jdbcTemplate.update(<span class="string">"update account set money=? where name=?"</span>,<span class="number">10000</span>,<span class="string">"tom"</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">  <span class="meta">@Test</span></span><br><span class="line"></span><br><span class="line">  <span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">testDelete</span><span class="params">()</span></span>&#123;</span><br><span class="line"></span><br><span class="line">​    jdbcTemplate.update(<span class="string">"delete from account where name=?"</span>,<span class="string">"tom"</span>);</span><br><span class="line"></span><br><span class="line">  &#125;</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p><strong>知识小结：</strong></p>
-<p>导入spring-jdbc和spring-tx坐标</p>
-<p>创建数据库表和实体 </p>
-<p>创建JdbcTemplate对象   </p>
-<p>   JdbcTemplate jdbcTemplate = new JdbcTemplate();  </p>
-<p>   jdbcTemplate.setDataSource(dataSource); </p>
-<p>执行数据库操作：   </p>
-<p>   更新操作：     </p>
-<p>   jdbcTemplate.update (sql,params)   </p>
-<p>   查询操作：     </p>
-<p>   jdbcTemplate.query (sql,Mapper,params)   </p>
-<p>   jdbcTemplate.queryForObject(sql,Mapper,params)</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Spring</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2018/03/26/2018-03-26-Spring-%E6%8A%80%E6%9C%AF%E6%80%BB%E7%BB%934JdbcTemplate/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
     <nav id="page-nav">
       <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><a class="extend next" rel="next" href="/page/2/">Next &amp;raquo;</a>
@@ -2253,6 +2221,10 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color3">Apache Dubbo</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
               </li>
             
             <div class="clearfix"></div>
