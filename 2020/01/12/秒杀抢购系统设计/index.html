@@ -6,20 +6,22 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>秒杀抢购系统设计 | PhilJ</title>
+  <title>秒杀抢购系统设计-1 | PhilJ</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="秒杀抢购系统设计今天想总结一下的就是关于Redis这个缓存中间件在秒杀系统中的一个作用。 废话不多说，开始今天的总结： 1. 为什么要使用Redis？首先我们要弄清楚，为什么要在系统中使用Redis呢？ 因为我们知道秒杀这个业务所产生得瞬时并发量是很可怕的！如果这么大的并发访问全部击中了mysql，那么mysql有可能就暴毙了。为了防止mysql这位兄贵暴毙，我们需要使用redis来承担mysql">
+  <meta name="description" content="秒杀系统天生就是一个需要抗下巨大并发量的一套系统，我们首先要考虑微服务的设计思想，将秒杀服务剥离出来，使之成为一个独立的微服务，再给他一个属于自己的数据库，一个服务对应一个库嘛。这样做，就算到时候秒杀服务崩了，也不会影响到其他的服务，这就实现了高可用。 在秒杀系统中，我们数据库压力会很大很大，并发量一大，DB就可能崩掉，我们是不是应该考虑一下用一下我们的老胖友Redis了？ 1. 为什么要使用Re">
 <meta property="og:type" content="article">
-<meta property="og:title" content="秒杀抢购系统设计">
+<meta property="og:title" content="秒杀抢购系统设计-1">
 <meta property="og:url" content="http://yoursite.com/2020/01/12/%E7%A7%92%E6%9D%80%E6%8A%A2%E8%B4%AD%E7%B3%BB%E7%BB%9F%E8%AE%BE%E8%AE%A1/index.html">
 <meta property="og:site_name" content="PhilJ">
-<meta property="og:description" content="秒杀抢购系统设计今天想总结一下的就是关于Redis这个缓存中间件在秒杀系统中的一个作用。 废话不多说，开始今天的总结： 1. 为什么要使用Redis？首先我们要弄清楚，为什么要在系统中使用Redis呢？ 因为我们知道秒杀这个业务所产生得瞬时并发量是很可怕的！如果这么大的并发访问全部击中了mysql，那么mysql有可能就暴毙了。为了防止mysql这位兄贵暴毙，我们需要使用redis来承担mysql">
+<meta property="og:description" content="秒杀系统天生就是一个需要抗下巨大并发量的一套系统，我们首先要考虑微服务的设计思想，将秒杀服务剥离出来，使之成为一个独立的微服务，再给他一个属于自己的数据库，一个服务对应一个库嘛。这样做，就算到时候秒杀服务崩了，也不会影响到其他的服务，这就实现了高可用。 在秒杀系统中，我们数据库压力会很大很大，并发量一大，DB就可能崩掉，我们是不是应该考虑一下用一下我们的老胖友Redis了？ 1. 为什么要使用Re">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://q6ohcurw1.bkt.clouddn.com/%E5%93%A8%E5%85%B5.png">
 <meta property="article:published_time" content="2020-01-12T12:27:11.000Z">
-<meta property="article:modified_time" content="2020-03-11T12:49:32.695Z">
+<meta property="article:modified_time" content="2020-03-11T14:04:26.031Z">
 <meta property="article:author" content="PhilJ">
 <meta property="article:tag" content="秒杀抢购系统设计">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://q6ohcurw1.bkt.clouddn.com/%E5%93%A8%E5%85%B5.png">
   
     <link rel="alternative" href="/atom.xml" title="PhilJ" type="application/atom+xml">
   
@@ -162,7 +164,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      秒杀抢购系统设计
+      秒杀抢购系统设计-1
     </h1>
   
 
@@ -175,12 +177,15 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h2 id="秒杀抢购系统设计"><a href="#秒杀抢购系统设计" class="headerlink" title="秒杀抢购系统设计"></a>秒杀抢购系统设计</h2><p>今天想总结一下的就是关于Redis这个缓存中间件在秒杀系统中的一个作用。</p>
-<p>废话不多说，开始今天的总结：</p>
-<h4 id="1-为什么要使用Redis？"><a href="#1-为什么要使用Redis？" class="headerlink" title="1. 为什么要使用Redis？"></a>1. 为什么要使用Redis？</h4><p>首先我们要弄清楚，为什么要在系统中使用Redis呢？</p>
+        <p>秒杀系统天生就是一个需要抗下巨大并发量的一套系统，我们首先要考虑微服务的设计思想，将秒杀服务剥离出来，使之成为一个独立的微服务，再给他一个属于自己的数据库，一个服务对应一个库嘛。这样做，就算到时候秒杀服务崩了，也不会影响到其他的服务，这就实现了高可用。</p>
+<p>在秒杀系统中，我们数据库压力会很大很大，并发量一大，DB就可能崩掉，我们是不是应该考虑一下用一下我们的老胖友Redis了？</p>
+<h3 id="1-为什么要使用Redis？"><a href="#1-为什么要使用Redis？" class="headerlink" title="1. 为什么要使用Redis？"></a>1. 为什么要使用Redis？</h3><p>首先我们要弄清楚，为什么要在系统中使用Redis呢？</p>
 <p>因为我们知道秒杀这个业务所产生得瞬时并发量是很可怕的！如果这么大的并发访问全部击中了mysql，那么mysql有可能就暴毙了。为了防止mysql这位兄贵暴毙，我们需要使用redis来承担mysql的压力，可以设定一个定时任务，将mysql中的秒杀商品的信息包括库存信息copy一份进入redis中。这样在秒杀开始后，大量并发访问会打在redis上，毕竟redis大佬单机扛起几万并发量不算事儿，实在不行我们还可以搭建集群嘛，对不？</p>
-<h4 id="2-商品超卖咋解决啊？"><a href="#2-商品超卖咋解决啊？" class="headerlink" title="2. 商品超卖咋解决啊？"></a>2. 商品超卖咋解决啊？</h4><p>我们知道了要使用redis作为缓存中间件了，那么问题来了，这时候有100台行车记录仪要进行抢购，你要是卖多了，卖了200台出去，那不就亏大了？</p>
-<p>那如何防止商品超卖啊？</p>
+<h3 id="2-Redis集群"><a href="#2-Redis集群" class="headerlink" title="2. Redis集群"></a>2. Redis集群</h3><p>单机Redis如果解决不了高并发问题的话，我们可以考虑搭建Redis的集群，什么主从架构、主从同步、读写分离全部安排上，再搞个哨兵模式：</p>
+<img src="http://q6ohcurw1.bkt.clouddn.com/%E5%93%A8%E5%85%B5.png" style="zoom: 40%;">
+
+<h3 id="3-商品超卖咋解决啊？"><a href="#3-商品超卖咋解决啊？" class="headerlink" title="3. 商品超卖咋解决啊？"></a>3. 商品超卖咋解决啊？</h3><p>我们知道了要使用redis作为缓存中间件了，那么问题来了，这时候就剩下1件商品了，3个客户同时去购买，那结库存不就成-2了吗，这种情况肯定是不允许的啊。</p>
+<p>那如何防止商品超卖啊？我第一个想到的是使用MQ啊，把这些购买的请求塞进mq中，让他们在里面慢慢玩，我消费者处理完一个请求，在处理下一个，库存不够了就return一个false回去。</p>
 
       
 
