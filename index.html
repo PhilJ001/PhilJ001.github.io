@@ -324,7 +324,8 @@
 
 <h3 id="3-商品超卖咋解决啊？"><a href="#3-商品超卖咋解决啊？" class="headerlink" title="3. 商品超卖咋解决啊？"></a>3. 商品超卖咋解决啊？</h3><p>我们知道了要使用redis作为缓存中间件了，那么问题来了，这时候就剩下1件商品了，3个客户同时去购买，那结库存不就成-2了吗，这种情况肯定是不允许的啊。</p>
 <p>那如何防止商品超卖啊？我第一个想到的是使用MQ啊，把这些购买的请求塞进mq中，让他们在里面慢慢玩，我消费者处理完一个请求，在处理下一个，库存不够了就return一个false回去。</p>
-
+<h3 id="4-为了应对高并发场景下的请求需要解决哪些问题呢？"><a href="#4-为了应对高并发场景下的请求需要解决哪些问题呢？" class="headerlink" title="4. 为了应对高并发场景下的请求需要解决哪些问题呢？"></a>4. 为了应对高并发场景下的请求需要解决哪些问题呢？</h3><h4 id="前端页面。"><a href="#前端页面。" class="headerlink" title="前端页面。"></a>前端页面。</h4><p>想象这么一个场景，双十一到了，这时候是23:59分，想想这时候的你在干什么？肯定是盯着手机淘宝啊，无处安放的小手肯定已经在疯狂点击着下单按钮了。为了防止这种情况反反复复的提交下单请求，给服务器造成过大的压力，我们可以在抢购时间没到的时候，将前端页面的下单购买按钮给设置成灰色不可点击，等到抢购时间到了，再调成可以点击状态，哦！对了，还有件事忘记说了，那就是大家开始抢购了，我们还可以给这个按钮设置成点了一次等5s才能再次点击的功能，防止那些“疯狂的”剁手党去给我们服务器制造压力！</p>
+<h4 id="控制网络流量"><a href="#控制网络流量" class="headerlink" title="控制网络流量"></a>控制网络流量</h4>
       
 
       
@@ -2022,11 +2023,11 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
+                <a href="javascript:void(0)" class="js-tag color3">Apache Dubbo</a>
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">Apache Dubbo</a>
+                <a href="javascript:void(0)" class="js-tag color5">项目总结</a>
               </li>
              
               <li class="article-tag-list-item">
